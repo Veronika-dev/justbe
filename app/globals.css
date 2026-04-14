@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-manrope: var(--font-manrope);
+  --color-primary: var(--primary);
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-tx-primary: var(--text-primary);
+  --color-tx-secondary: var(--text-secondary);
+  --color-tx-dim: var(--text-dim);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary: #3a9ab8;
+    --primary-50: oklch(0.17 0.01 0);
+    --primary-100: oklch(0.2 0.01 225.88);
+    --primary-200: oklch(0.26 0.03 226);
+    --bg-base:       #060b10;
+    --bg-surface:    #0c1520;
+    --bg-elevated:   #141e2c;
+    --bg-hover:      #1c2a3a;
+    --accent-teal:   #1e6b8a;
+    --accent-sage:   #1e5a3c;
+    --accent-terra:  #7a4020;
+    --accent-lav:    #5c3c7a;
+    --accent-amber:  #7a4e1c;  /* ночной */
+    --text-primary:  #d4e0e8;  /* 14.7:1 AAA */
+    --text-secondary:#7a94a8;  /* 6.2:1  AA  */
+    --text-dim:      #4a6070;  /* 3.0:1  large */
+    --border:        rgba(212,224,232,0.06);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Manrope, Helvetica, sans-serif;
+}
+
+@layer components {
+  .card-background {
+    @apply bg-primary-100 backdrop-blur-sm px-8 py-8 border border-primary-200 rounded-xl;
+  }
+}

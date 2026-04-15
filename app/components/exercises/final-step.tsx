@@ -24,11 +24,11 @@ export default function FinalStep({ usedMethod, onRestart }: { usedMethod: Activ
       </div>
       <div>
         {
-          onRestart && <button className="bg-primary/10 text-white px-4 py-2 rounded-lg mt-4 me-4 cursor-pointer" onClick={ onRestart }>
+          onRestart && <button className="bg-primary/10 px-4 py-2 rounded-lg mt-4 me-4 cursor-pointer" onClick={ onRestart }>
             { t('retakeTest') }
           </button>
         }
-        <NextLink href="/exercises" className="bg-primary text-white px-4 py-2 rounded-lg mt-4">
+        <NextLink href="/exercises" className="bg-primary px-4 py-2 rounded-lg mt-4">
           { t('chooseAnother') }
         </NextLink>
       </div>

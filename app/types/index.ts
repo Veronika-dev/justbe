@@ -1,23 +1,6 @@
 type Activity = 'grounding' | 'breathing' | 'video' | 'interactive' | 'creative' | 'pmr'
 
-// interface CheckIn {
-//   id: string;
-//   timestamp: number; // unix ms
-//   anxietyLevel: number;
-//   answers: number[];
-//   mode: Activity;
-//   // activity: string; // конкретная техника
-//   isNightMode: boolean;
-//   durationMs?: number; // сколько провёл
-// }
-//
-// interface CheckInResponse {
-//   id: number
-//   title: string
-//   image?: string
-//   description?: string
-// }
-
+// Check stress level
 type CheckinState = {
   currentResult: CheckInResult | null;
 };
@@ -45,6 +28,7 @@ interface ModeScheme {
   [key: number]: Activity[]
 }
 
+// Methods
 interface MethodData {
   id: Activity;
   title: string;
@@ -52,9 +36,14 @@ interface MethodData {
   image?: string;
 }
 
+// Grounding
 interface Step {
   step: number;
   stepNumber?: number;
   title: string;
   description?: string;
 }
+
+// Breathing
+type BreathingStep = 'inhale' | 'exhale' | 'hold' | 'hold1' | 'hold2'
+type BreatingType = 'box' | '478'

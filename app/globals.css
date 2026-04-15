@@ -10,7 +10,7 @@
   --color-foreground: var(--foreground);
   --font-manrope: var(--font-manrope);
   --color-primary: var(--primary);
-  --color-primary-50: var(--primary-50);
+  --color-primary-value: var(--primary-value);
   --color-primary-100: var(--primary-100);
   --color-primary-200: var(--primary-200);
   --color-tx-primary: var(--text-primary);
@@ -23,11 +23,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #3a9ab8;
-    --primary-50: oklch(0.17 0.01 0);
-    --primary-100: oklch(0.2 0.01 225.88);
-    --primary-200: oklch(0.26 0.03 226);
+    --foreground: #c2c0ce;
+    --primary: oklch(0.47 0.11 281.17);
+    --primary-value: 0.47 0.11 281.17;
+    --primary-100: oklch(0.18 0.02 284.69);
+    --primary-200: oklch(0.22 0.03 283.9);
     --bg-base:       #060b10;
     --bg-surface:    #0c1520;
     --bg-elevated:   #141e2c;
@@ -37,7 +37,7 @@
     --accent-terra:  #7a4020;
     --accent-lav:    #5c3c7a;
     --accent-amber:  #7a4e1c;  /* ночной */
-    --text-primary:  #d4e0e8;  /* 14.7:1 AAA */
+    --text-primary:  #C3C1F8;  /* 14.7:1 AAA */
     --text-secondary:#7a94a8;  /* 6.2:1  AA  */
     --text-dim:      #4a6070;  /* 3.0:1  large */
     --border:        rgba(212,224,232,0.06);
@@ -53,5 +53,17 @@ body {
 @layer components {
   .card-background {
     @apply bg-primary-100 backdrop-blur-sm px-8 py-8 border border-primary-200 rounded-xl;
+  }
+  .button-linear {
+    @apply text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5;
+  }
+  .btn-linear-outline {
+    @apply relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg bg-linear-to-br from-purple-600 to-blue-500 hover:from-purple-600 hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800;
+  }
+  .btn-linear-outline span {
+    @apply relative px-4 py-2.5 transition-all ease-in duration-75 bg-background rounded-lg hover:bg-transparent hover:dark:bg-transparent leading-5;
+  }
+  .btn-unobtrusive {
+    @apply rounded-md bg-white/10 cursor-pointer px-6 py-1.5 font-normal inset-ring inset-ring-white/5 hover:bg-white/20 sm:mt-0 sm:w-auto text-base transition-colors duration-300 ease-in-out;
   }
 }

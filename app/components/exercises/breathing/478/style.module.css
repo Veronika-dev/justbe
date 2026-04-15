@@ -1,0 +1,6 @@
+.sectorHold {
+    clip-path: polygon(100% 36%, 100% 100%, 24% 100%, 50% 50%);
+}
+.sectorExhale {
+    clip-path: polygon(50% 50%, 0 146%, 0 0, 50% 0);
+}

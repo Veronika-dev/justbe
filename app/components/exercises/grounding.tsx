@@ -1,6 +1,6 @@
 'use client'
 
-import {useMemo, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {useTranslations} from "next-intl";
 import BreathingBox from "@/components/exercises/breathing/box";
 import FinalStep from "@/components/exercises/final-step";
@@ -8,18 +8,14 @@ import FinalStep from "@/components/exercises/final-step";
 export default function Grounding() {
   const [currentStep, setCurrentStep] = useState(0)
   const t = useTranslations('Method')
-
-  const currentStepInfo: Step | null = useMemo(() => {
-    if (currentStep > 0 && currentStep < 6) {
-      return {
-        step: currentStep,
-        stepNumber: 5 - currentStep + 1,
-        title: t(`groundingSteps.${currentStep}`),
-        description: t(`groundingSteps.${currentStep}desc`),
-      }
+  const currentStepInfo: Step | null = currentStep > 0 && currentStep < 6
+    ? {
+      step: currentStep,
+      stepNumber: 5 - currentStep + 1,
+      title: t(`groundingSteps.${currentStep}`),
+      description: t(`groundingSteps.${currentStep}desc`),
     }
-    return null
-  }, [currentStep])
+    : null
 
   const goNextStep = () => {
     setCurrentStep(currentStep + 1)
@@ -34,14 +30,14 @@ export default function Grounding() {
       {
         currentStep === 0
           ? <div>
-              <BreathingBox />
+              <BreathingBox showStartScreen={false} />
               <p>{ t(`groundingSteps.start`) }</p>
             </div>
           : currentStepInfo && <StepItem step={currentStepInfo} />
       }
       {
         currentStep < 6
-          ? <button onClick={goNextStep} className="bg-primary text-white px-4 py-2 rounded-lg mt-4">
+          ? <button onClick={goNextStep} className="bg-primary px-4 py-2 rounded-lg mt-4">
               { currentStep === 0 ? t('start') : t('continue') }
             </button>
           : <FinalStep usedMethod="grounding" onRestart={restart} />

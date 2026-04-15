@@ -5,10 +5,10 @@ import NextLink from "next/link";
 
 export default function ExercisesCard({ method } : { method: Activity }) {
   const { methodData } = useMethod(method)
+  const t = useTranslations('Method')
   if (methodData === null) {
     return null
   }
-  const t = useTranslations('Method')
   return (
     <NextLink href={`/exercises/${method}`}>
       {
@@ -17,8 +17,8 @@ export default function ExercisesCard({ method } : { method: Activity }) {
           : <div className="rounded-lg h-32 bg-gray-500" />
       }
       <div className="py-4 text-left">
-        <h3 className="text-xl text-white mb-4 hover:opacity-85">{ methodData.title }</h3>
-        <p className="text-md text-white opacity-60 mb-4">{methodData.description}</p>
+        <h3 className="text-xl mb-4 hover:opacity-85">{ methodData.title }</h3>
+        <p className="text-md opacity-60 mb-4">{methodData.description}</p>
         <p className="" role="link">{ t('start') }</p>
       </div>
     </NextLink>

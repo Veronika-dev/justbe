@@ -10,7 +10,9 @@
     "settings": "Настройки"
   },
   "Common": {
-    "close": "Close"
+    "close": "Close",
+    "start": "Start",
+    "stop": "Stop"
   },
   "Checkin": {
     "q1": "How does your body feel?",
@@ -60,10 +62,25 @@
     },
     "breathing": "Breathing",
     "breathingDescription": "Controlling your breathing using a special technique",
-    "breathingReadMore": "",
+    "breathingTypes": {
+      "box": "Box breathing",
+      "boxDescription": "To begin box breathing, sit or stand with your back straight. Or, if you prefer, you can lie down with your arms by your side. Choose whatever position feels most relaxing.\n\n      Close your eyes if it feels right for you.\n\n      Take a moment to relax your shoulders, release any tension in your jaw and let your body settle. Then follow the steps below.\n\n1. Breathe in slowly to a count of 4. If you want to, place your hands on your belly and feel it expand like a balloon.\n2. After breathing in, hold your breath for another count of 4.\n3. Breathe out slowly and steadily through your mouth, again counting to 4 in your mind.\n4. After breathing out, hold your breath again for another count of 4.\n5. Go back to step 1 and repeat the process for as long as you want to.",
+      "478": "4-7-8 breathing technique",
+      "478Description": "To begin 4-7-8 breathing, sit comfortably with a straight back. Or, if you’re using this exercise to help you fall asleep, lie down instead.\n\nThroughout the session, your tongue should be resting gently against the roof of your mouth, just behind your top front teeth.\n\nWhen you’re ready, follow the steps below.\n\n1. Breathe in silently through your nose for a count of 4.\n2. After breathing in, hold your breath for a count of 7.\n3. Breathe out forcefully through your mouth for a count of 8, making a ‘whoosh’ sound as you let the air out. This may be easier if you purse your lips.\n4. Go back to step 1 and repeat the process up to 3 more times, for a total of 4 rounds.\n\nIf you're a beginner, you might feel a bit lightheaded at first. This is normal. At first, you should only practice 4 rounds at a time. As you get used to the exercise, you can do it up to 8 times."
+    },
     "breathingSteps": {
-      "inhale": "Сделай глубокий вдох",
-      "exhale": "Сделай долгий выдох"
+      "inhale": "Breathe in",
+      "inhaleDescription": "Place your hands on your belly and feel it expand like a balloon",
+      "inhale478Description": "Place your hands on your belly and feel it expand like a balloon",
+      "hold": "Hold your breath",
+      "holdDescription": "Hold your breath and try not to think about anything",
+      "hold478Description": "Hold your breath and try not to think about anything",
+      "exhale": "Breathe out",
+      "exhaleDescription": "Breathe out slowly and steadily through your mouth",
+      "exhale478Description": "Breathe out forcefully through your mouth, making a ‘whoosh’ sound as you let the air out",
+      "oneMoreTime": "...and one more time",
+      "or": "or",
+      "continueExercise": "continue"
     },
     "video": "Video",
     "videoDescription": "Watching calming videos to shift your focus",

@@ -44,6 +44,14 @@ interface Step {
   description?: string;
 }
 
+interface ChooseItem<T> {
+  id: T;
+  title: string;
+}
+
 // Breathing
 type BreathingStep = 'inhale' | 'exhale' | 'hold' | 'hold1' | 'hold2'
 type BreatingType = 'box' | '478'
+
+// Interactive
+type InteractiveType = 'sand' | 'lines'

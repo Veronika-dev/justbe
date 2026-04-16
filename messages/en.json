@@ -89,6 +89,11 @@
     "studySource": "Source of the study",
     "interactive": "Interactive",
     "interactiveDescription": "Relaxing interactive activities",
+    "interactiveReadMore": "Interactive exercises aren't just for fun. When you do something with your hands and see the result, your brain releases dopamine, stress drops, and you're left with that quiet sense of \"done.\" Kind of like finishing a drawing or finally tidying up a shelf.\nThis works especially well if just \"sitting and breathing\" feels impossible — interactive tasks gently occupy your mind and leave less room for anxious thoughts.",
+    "interactiveSteps": {
+      "lines": "Fading lines",
+      "sand": "Sand"
+    },
     "creative": "Creativity",
     "creativeDescription": "Suggestions for creative activities, such as crafts",
     "pmr": "Progressive muscle relaxation",

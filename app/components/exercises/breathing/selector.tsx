@@ -8,6 +8,7 @@ import {Listbox, ListboxButton, ListboxOptions, ListboxOption, Button} from '@he
 import {breathingTypes} from "@/lib/variables";
 import {useTranslations} from "next-intl";
 import { ChevronDown, Check } from 'lucide-react'
+import FinalStep from "@/components/exercises/final-step";
 
 interface BreathingBoxProps {
   showStartScreen?: boolean
@@ -17,6 +18,7 @@ export default function BreathingSelector({ showStartScreen = true }: BreathingB
   const { currentResult } = useCheckinStore((state) => state)
 
   const [startScreen, setStartScreen] = useState(showStartScreen)
+  const [finished, setFinished] = useState(false)
   const [type, setType] = useState<BreatingType>(currentResult && currentResult.level >= 4 ? '478' : 'box')
 
   const t = useTranslations('Common')
@@ -34,13 +36,17 @@ export default function BreathingSelector({ showStartScreen = true }: BreathingB
                 4. You are ready to start.
               </p>
             </div>
-          : <div className="card-background">
+          :
+          !finished && <div className="card-background">
               {
                 type === '478'
-                  ? <Breathing478Animation finishExerciseAction={() => setStartScreen(true)} />
-                  : <BreathingBoxAnimation finishExerciseAction={() => setStartScreen(true)} />
+                  ? <Breathing478Animation finishExerciseAction={() => setFinished(true)} />
+                  : <BreathingBoxAnimation finishExerciseAction={() => setFinished(true)} />
               }
             </div>
+      }
+      {
+        finished && <FinalStep usedMethod="breathing" />
       }
       <div className="card-background mt-4 flex justify-between items-center">
         <ChooseBreathingType type={type} setType={setType} />

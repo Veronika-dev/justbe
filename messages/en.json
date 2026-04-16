@@ -12,7 +12,8 @@
   "Common": {
     "close": "Close",
     "start": "Start",
-    "stop": "Stop"
+    "stop": "Stop",
+    "source": "Source"
   },
   "Checkin": {
     "q1": "How does your body feel?",
@@ -84,6 +85,8 @@
     },
     "video": "Video",
     "videoDescription": "Watching calming videos to shift your focus",
+    "videoReadMore": "Nature and meditation videos aren't just pretty to look at. Research shows they actually work: heart rate drops, the nervous system shifts into rest mode — that's real, measurable relaxation happening in your body. So if you feel calmer after watching — that's not in your head.",
+    "studySource": "Source of the study",
     "interactive": "Interactive",
     "interactiveDescription": "Relaxing interactive activities",
     "creative": "Creativity",

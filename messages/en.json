@@ -13,7 +13,8 @@
     "close": "Close",
     "start": "Start",
     "stop": "Stop",
-    "source": "Source"
+    "source": "Source",
+    "readMore": "Read more"
   },
   "Checkin": {
     "q1": "How does your body feel?",
@@ -92,10 +93,138 @@
     "interactiveReadMore": "Interactive exercises aren't just for fun. When you do something with your hands and see the result, your brain releases dopamine, stress drops, and you're left with that quiet sense of \"done.\" Kind of like finishing a drawing or finally tidying up a shelf.\nThis works especially well if just \"sitting and breathing\" feels impossible — interactive tasks gently occupy your mind and leave less room for anxious thoughts.",
     "interactiveSteps": {
       "lines": "Fading lines",
-      "sand": "Sand"
+      "sand": "Sand",
+      "touchScreenToStart": "Touch the screen and swipe to draw"
     },
     "creative": "Creativity",
     "creativeDescription": "Suggestions for creative activities, such as crafts",
+    "creativeReadMore": "Hands are a surprisingly powerful tool against anxiety. Crafting, gardening, playing an instrument — these aren't just hobbies. Research shows they genuinely lift your mood and make life feel more manageable.\nWhen your hands are busy, your mind stops looping through anxious thoughts. And your body actually relaxes — the feel of soil or clay sends a signal to your nervous system: \"we're okay, you can breathe now.\" It's one of the healthiest forms of distraction out there.",
+    "creativeSteps": {
+      "prev": "Previous card",
+      "next": "Next card",
+      "random": "Random card",
+      "knittingTitle": "Knitting",
+      "knittingDescription": "Try knitting a simple scarf or potholder. The rhythmic movements calm your nervous system.",
+
+      "coloringTitle": "Coloring",
+      "coloringDescription": "Print a mandala pattern or grab an adult coloring book. Fill it with color without thinking about the result.",
+
+      "claySculptingTitle": "Clay Sculpting",
+      "claySculptingDescription": "Grab some regular clay or plasticine. Make whatever you want — balls, snakes, abstract shapes.",
+
+      "drawingTitle": "Drawing",
+      "drawingDescription": "Take a sheet of paper and draw what you see in front of you — a mug, your hand, the view from the window. No judgments.",
+
+      "paperAirplanesTitle": "Paper Airplanes",
+      "paperAirplanesDescription": "Fold a few different paper airplanes. Focus on getting the folds just right, then send them flying.",
+
+      "origamiTitle": "Origami",
+      "origamiDescription": "Fold a simple figure: a frog, a boat, or a flower. All you need is a sheet of paper.",
+
+      "plantCareTitle": "Plant Care",
+      "plantCareDescription": "Water and check on each plant at home. Wipe the leaves with a damp cloth. It's surprisingly meditative.",
+
+      "herbPlantingTitle": "Growing Herbs",
+      "herbPlantingDescription": "Plant basil, dill, or parsley in a pot — seeds are available at any store.",
+
+      "cookingTitle": "Cooking Something New",
+      "cookingDescription": "Pick a recipe you've never tried before. Focus on the smells, textures, and the process itself.",
+
+      "bakingTitle": "Baking",
+      "bakingDescription": "Knead dough with your hands. The physical sensation of warm dough is calming in itself.",
+
+      "collageTitle": "Collage",
+      "collageDescription": "Cut out words and images you like from old magazines and paste them onto a sheet of paper.",
+
+      "embroideryTitle": "Embroidery",
+      "embroideryDescription": "Try simple embroidery: thread, a needle, a small piece of fabric. Start with a basic stem stitch.",
+
+      "paperMosaicTitle": "Paper Mosaic",
+      "paperMosaicDescription": "Tear colored paper into small pieces and arrange them into any picture on cardboard.",
+
+      "woodworkTitle": "Woodwork",
+      "woodworkDescription": "Sand an old cutting board or wooden object. Smooth, steady hand movements make for great practice.",
+
+      "watercolorTitle": "Watercolor",
+      "watercolorDescription": "Fill a glass with water, grab some watercolors, and just mix colors on paper. No plan needed.",
+
+      "braceletWeavingTitle": "Bracelet Weaving",
+      "braceletWeavingDescription": "Take some embroidery thread and weave a simple bracelet for yourself or a friend.",
+
+      "sortingTitle": "Sorting",
+      "sortingDescription": "Go through a junk drawer, sort buttons by color or size. The monotony is surprisingly soothing.",
+
+      "scrapbookingTitle": "Scrapbooking",
+      "scrapbookingDescription": "Put together a page from photos, tickets, and notes that have been sitting around doing nothing.",
+
+      "snowflakesTitle": "Cutting Snowflakes",
+      "snowflakesDescription": "Fold a sheet of paper and cut out patterns with scissors. Every snowflake comes out unique.",
+
+      "crochetTitle": "Crochet",
+      "crochetDescription": "Learn to make single crochet stitches — it's easier than knitting needles, and you'll see results fast.",
+
+      "botanicalSketchTitle": "Botanical Sketch",
+      "botanicalSketchDescription": "Pick any plant or piece of fruit and draw it in pencil, trying to capture its shape and details.",
+
+      "upcyclingTitle": "Upcycling Crafts",
+      "upcyclingDescription": "Make something out of cardboard boxes, bottle caps, or jars. It doesn't have to be useful — that's fine.",
+
+      "candlesTitle": "Scented Candles",
+      "candlesDescription": "Melt down old candle stubs, add essential oil, and pour into a glass. Simple and satisfying.",
+
+      "restorationTitle": "Cleaning & Restoring",
+      "restorationDescription": "Take an old item — shoes, a bag, a picture frame — and tidy it up. Hands busy, mind at rest.",
+
+      "dotDrawingTitle": "Dot Drawing",
+      "dotDrawingDescription": "Draw dots on paper and connect them into any pattern you like. No rules.",
+
+      "newspaperWeavingTitle": "Newspaper Weaving",
+      "newspaperWeavingDescription": "Roll newspaper into tubes and weave a simple basket or trivet.",
+
+      "stoneDecoratingTitle": "Decorating Stones",
+      "stoneDecoratingDescription": "Pick up a few stones outside and paint them with acrylics or markers.",
+
+      "marblingTitle": "Marbling",
+      "marblingDescription": "Drop nail polish onto water and dip a sheet of paper in — you'll get a unique pattern every time.",
+
+      "fingerKnittingTitle": "Finger Knitting",
+      "fingerKnittingDescription": "No needles needed — you can weave yarn right on your fingers. Make a simple chain or a small mat.",
+
+      "doodlingTitle": "Doodling",
+      "doodlingDescription": "Fill a sheet of paper with patterns, swirls, grids, and waves. No goal — just let your hand move.",
+      "link": {
+        "knitting": "https://sheepandstitch.com/how-to-knit/",
+        "coloring": "https://www.supercoloring.com",
+        "claySculpting": "https://www.sculpey.com/blogs/blog/a-beginners-guide-to-sculpting-in-clay",
+        "drawing": "https://rapidfireart.com",
+        "paperAirplanes": "https://www.foldnfly.com",
+        "origami": "https://www.origami-make.org",
+        "plantCare": "https://www.sariweiss.com/blog/houseplant-care-tips-for-beginners",
+        "herbPlanting": "https://www.gardeningknowhow.com/edible/herbs/hgen/growing-herbs-indoors.htm",
+        "cooking": "https://www.simplyrecipes.com/",
+        "baking": "https://www.kingarthurbaking.com/learn/guides/baking-101",
+        "collage": "https://www.andigarbarino.com/blog/how-to-make-good-collages-with-paper-magazines",
+        "embroidery": "https://www.gathered.how/needlework/embroidery/embroidery-for-beginners-guide",
+        "paperMosaic": "https://www.wikihow.com/Make-a-Paper-Mosaic",
+        "woodwork": "https://www.instructables.com/Woodworking-Projects-for-Beginners/",
+        "watercolor": "https://jennarainey.com/beginners-guide-to-watercolor/",
+        "braceletWeaving": "https://www.friendship-bracelets.net/tutorials",
+        "sorting": "https://simplyorganized.me/2018/05/how-to-organize-the-little-things.html",
+        "scrapbooking": "https://abeautifulmess.com/scrapbooking-for-beginners-our-family-volume-1/",
+        "snowflakes": "https://www.wikihow.com/Make-Paper-Snowflakes",
+        "crochet": "https://sarahmaker.com/how-to-crochet/",
+        "botanicalSketch": "https://www.artistsnetwork.com/art-subjects/botanical-art/",
+        "upcycling": "https://www.housedigest.com/2148072/cardboard-plastic-bottle-tabletop-organizer/",
+        "candles": "https://www.candlescience.com/learning/how-to-make-candles/",
+        "restoration": "https://www.topdowntrading.co.uk/blog/how-to-clean-and-restore-vintage-clothing-4-pro-tips.html",
+        "dotDrawing": "https://monkeypen.com/collections/dot-to-dot-printables?srsltid=AfmBOop6R0VoLXS1VayyHVeBwktvpL9K7E_C5atcgU6FPCRaMZWtPQ_x",
+        "newspaperWeaving": "https://www.instructables.com/Weaving-baskets-with-newspaper/",
+        "stoneDecorating": "https://rockpainting101.com/how-to-paint-rocks/",
+        "marbling": "https://designmom.com/diy-marbling-with-nail-polish/",
+        "fingerKnitting": "https://flaxandtwine.com/blogs/blog/finger-knitting-how-to",
+        "doodling": "https://altenew.com/blogs/the-creative-corner/how-do-you-make-doodle-art-a-beginner-s-guide"
+      }
+    },
     "pmr": "Progressive muscle relaxation",
     "pmrDescription": "Techniques for physically relaxing the body",
     "source": "Method source",

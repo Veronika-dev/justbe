@@ -13,7 +13,8 @@
     "close": "Закрыть",
     "start": "Начать",
     "stop": "Завершить",
-    "source": "Источник"
+    "source": "Источник",
+    "readMore": "Подробнее"
   },
   "Checkin": {
     "q1": "Как ощущается тело?",
@@ -92,10 +93,138 @@
     "interactiveReadMore": "Интерактивные упражнения — это не просто игра. Когда ты что-то делаешь руками и видишь результат, мозг выделяет дофамин, тревога снижается, а вместо неё приходит приятное ощущение завершённости. Примерно как когда дорисовал картинку или разложил всё по полочкам.\nОсобенно хорошо это работает, если тебе сложно просто «сидеть и дышать» — интерактив мягко занимает голову и не оставляет места для тревожных мыслей.",
     "interactiveSteps": {
       "lines": "Исчезающие линии",
-      "sand": "Песок"
+      "sand": "Песок",
+      "touchScreenToStart": "Нажми на экран и проведи пальцем, чтобы начать рисовать"
     },
     "creative": "Творчество",
     "creativeDescription": "Предложения творческих занятий, что-то сделать руками",
+    "creativeReadMore": "Руки — неожиданно мощный инструмент против тревоги. Лепка, уход за растениями, игра на инструменте — всё это не просто хобби. Исследования показывают, что такие занятия реально поднимают настроение и дают ощущение, что жизнь — ок.\nКогда руки заняты делом, голова перестаёт крутить тревожные мысли. А тело в это время буквально расслабляется — прикосновение к земле или глине посылает нервной системе сигнал: «всё спокойно, можно выдохнуть». Это одно из самых здоровых отвлечений, которые существуют.",
+    "creativeSteps": {
+      "prev": "Предыдущая карточка",
+      "next": "Следующая карточка",
+      "random": "Случайная карточка",
+      "knittingTitle": "Вязание",
+      "knittingDescription": "Попробуй связать простой шарф или прихватку. Ритмичные движения успокаивают нервную систему.",
+
+      "coloringTitle": "Раскраска",
+      "coloringDescription": "Распечатай узор-мандалу или найди раскраску для взрослых. Заполняй цветом, не думая о результате.",
+
+      "claySculptingTitle": "Лепка из пластилина",
+      "claySculptingDescription": "Возьми обычный пластилин или глину. Лепи что угодно — шарики, змейки, абстрактные формы.",
+
+      "drawingTitle": "Рисование",
+      "drawingDescription": "Возьми лист бумаги и рисуй что видишь перед собой — кружку, руку, вид из окна. Без оценок.",
+
+      "paperAirplanesTitle": "Бумажные самолётики",
+      "paperAirplanesDescription": "Сложи несколько разных самолётиков. Сосредоточься на точности складок и запусти их.",
+
+      "origamiTitle": "Оригами",
+      "origamiDescription": "Сложи простую фигуру: лягушку, кораблик или цветок. Нужен только лист бумаги.",
+
+      "plantCareTitle": "Уход за растениями",
+      "plantCareDescription": "Полей и осмотри каждое растение дома. Протри листья влажной тряпочкой. Это медитативно.",
+
+      "herbPlantingTitle": "Посадка зелени",
+      "herbPlantingDescription": "Посади в горшок базилик, укроп или петрушку — семена есть в любом магазине.",
+
+      "cookingTitle": "Готовка нового блюда",
+      "cookingDescription": "Выбери рецепт, который никогда не пробовал. Сосредоточься на запахах, текстурах, процессе.",
+
+      "bakingTitle": "Выпечка",
+      "bakingDescription": "Замеси тесто руками. Само физическое ощущение тёплого теста успокаивает.",
+
+      "collageTitle": "Коллаж",
+      "collageDescription": "Вырежи из старых журналов слова и картинки, которые тебе нравятся, и склей их на лист.",
+
+      "embroideryTitle": "Вышивка",
+      "embroideryDescription": "Попробуй простую вышивку: нитки, иголка, кусочек ткани. Начни со стебельчатого шва.",
+
+      "paperMosaicTitle": "Мозаика из бумаги",
+      "paperMosaicDescription": "Нарви цветную бумагу на мелкие кусочки и выложи из них любой рисунок на картоне.",
+
+      "woodworkTitle": "Деревянные поделки",
+      "woodworkDescription": "Зашкурь старую разделочную доску или деревянный предмет. Ровные движения руками — хорошая практика.",
+
+      "watercolorTitle": "Акварель",
+      "watercolorDescription": "Набери воды в стакан, возьми акварель и просто смешивай цвета на бумаге. Без плана.",
+
+      "braceletWeavingTitle": "Плетение браслета",
+      "braceletWeavingDescription": "Возьми нитки мулине и заплети простой браслет другу или себе.",
+
+      "sortingTitle": "Сортировка",
+      "sortingDescription": "Разбери ящик с мелочами, отсортируй пуговицы по цвету или размеру. Монотонность успокаивает.",
+
+      "scrapbookingTitle": "Скрапбукинг",
+      "scrapbookingDescription": "Собери страничку из фотографий, билетов и заметок, которые давно лежат без дела.",
+
+      "snowflakesTitle": "Вырезание снежинок",
+      "snowflakesDescription": "Сложи лист бумаги и вырезай узоры ножницами. Каждая снежинка уникальна.",
+
+      "crochetTitle": "Вязание крючком",
+      "crochetDescription": "Научись вязать столбики без накида — это проще спиц, и результат виден быстро.",
+
+      "botanicalSketchTitle": "Ботанический скетч",
+      "botanicalSketchDescription": "Возьми любое растение или фрукт и нарисуй его карандашом, стараясь передать форму и детали.",
+
+      "upcyclingTitle": "Поделки из бросового материала",
+      "upcyclingDescription": "Сделай что-нибудь из картонных коробок, крышечек или банок. Пусть будет бесполезно — это нормально.",
+
+      "candlesTitle": "Ароматические свечи",
+      "candlesDescription": "Расплавь старые огарки, добавь эфирное масло, вылей в стакан. Просто и ощутимо.",
+
+      "restorationTitle": "Чистка и реставрация",
+      "restorationDescription": "Возьми старую вещь — обувь, сумку, рамку — и приведи в порядок. Руки заняты, голова отдыхает.",
+
+      "dotDrawingTitle": "Рисование по точкам",
+      "dotDrawingDescription": "Нарисуй точки на бумаге и соедини их в произвольный узор. Без правил.",
+
+      "newspaperWeavingTitle": "Плетение из газет",
+      "newspaperWeavingDescription": "Скрути газетные трубочки и поплети простую корзинку или подставку.",
+
+      "stoneDecoratingTitle": "Украшение камней",
+      "stoneDecoratingDescription": "Подними несколько камней на улице и разрисуй их красками или маркерами.",
+
+      "marblingTitle": "Marbling — разводы на воде",
+      "marblingDescription": "Капни лак для ногтей на воду и опусти лист бумаги — получится уникальный узор.",
+
+      "fingerKnittingTitle": "Вязание на пальцах",
+      "fingerKnittingDescription": "Никаких спиц не нужно — нитку можно плести прямо на пальцах. Простая цепочка или коврик.",
+
+      "doodlingTitle": "Дудлинг",
+      "doodlingDescription": "Заполняй лист бумаги узорами, завитками, клетками, волнами. Без цели, просто рука движется.",
+      "link": {
+        "knitting": "https://atmospherestore.ru/blog/sovety-i-rekomendacii/kak-nachat-vyazat-na-spicah",
+        "coloring": "https://www.supercoloring.com/ru/raskraski",
+        "claySculpting": "https://ru.pinterest.com/ideas/%D0%BF%D0%BE%D1%88%D0%B0%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BB%D0%B5%D0%BF%D0%BA%D0%B0-%D0%B8%D0%B7-%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%88%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D0%BD%D0%B0/952822481620/",
+        "drawing": "https://lectoroom.com/blog/kak-nachat-risovat-s-nulya:-poshagovoe-rukovodstvo-dlya-nachinayuschih",
+        "paperAirplanes": "https://novamett.ru/iz-bumagi/samolet",
+        "origami": "https://vseorigami.ru",
+        "plantCare": "https://flors.ru/cvetochnyj-blog/sovety-po-uhodu-za-komnatnymi-rastenijami/10-osnovnyh-pravil-vyraschivanija-komnatnyh",
+        "herbPlanting": "https://paperpaper.io/seedling/",
+        "cooking": "https://food.ru/recipes",
+        "baking": "https://www.povarenok.ru/recipes/dishes/bakery/",
+        "collage": "https://kalachevaschool.ru/blog/chto-takoe-kollazh",
+        "embroidery": "https://stitchy.ru/vyshivka-gladyu-dlya-nachinaushih/",
+        "paperMosaic": "https://ru.pinterest.com/ideas/%D0%BC%D0%BE%D0%B7%D0%B0%D0%B8%D0%BA%D0%B0-%D0%B8%D0%B7-%D0%B1%D1%83%D0%BC%D0%B0%D0%B3%D0%B8/896071216739/",
+        "woodwork": "https://lifehacker.ru/podelki-iz-dereva-svoimi-rukami/",
+        "watercolor": "https://akvarel.com/ru/news/risovaniye-akvarelyu-dlya-nachinayushchikh",
+        "braceletWeaving": "https://ru.wikihow.com/%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C-%D0%B1%D1%80%D0%B0%D1%81%D0%BB%D0%B5%D1%82-%D0%B4%D1%80%D1%83%D0%B6%D0%B1%D1%8B",
+        "sorting": "https://cherdak.io/blog/articles/kak-pravilno-organizovat-hranenie-melochej/",
+        "scrapbooking": "https://www.livemaster.ru/masterclasses/skrapbuking",
+        "snowflakes": "https://www.rbc.ru/life/news/6565d2869a79475a95e60b01",
+        "crochet": "https://t-j.ru/list/kak-vyazat-kruchkom/",
+        "botanicalSketch": "https://purmix.net/uroki/eda/frukty",
+        "upcycling": "https://www.ivd.ru/dizajn-i-dekor/aksessuary/chto-sdelat-iz-kartonnyh-korobok-5-idej-instrukcii-i-fotoprimery-134292",
+        "candles": "https://zvetnoe.ru/club/poleznye-stati/svechi-svoimi-rukami-gayd-po-materialam-dlya-nachinayushchikh-sovety-i-master-klass/",
+        "restoration": "https://articlesfactory.ru/remont-odezhdy-svoimi-rukami-5-prostyh-sposobov-obnovit-veshhi/",
+        "dotDrawing": "https://monkeypen.com/collections/dot-to-dot-printables?srsltid=AfmBOop6R0VoLXS1VayyHVeBwktvpL9K7E_C5atcgU6FPCRaMZWtPQ_x",
+        "newspaperWeaving": "https://www.7ya.ru/article/Gazetnye-trubochki-dlya-pleteniya-svoimi-rukami-master-klass/",
+        "stoneDecorating": "https://m-strana.ru/articles/rospis-kamney-dlya-sada/",
+        "marbling": "https://dzen.ru/a/ZUV9H5BpnkS8DBVp",
+        "fingerKnitting": "https://klubok.club/blog/sovety-pokupatelyam/kak-vyazat-rukami/",
+        "doodling": "https://lifehacker.ru/doodling-2/"
+      }
+    },
     "pmr": "Прогрессивная релаксация",
     "pmrDescription": "Работа над физическим расслаблением тела",
     "source": "Источник метода",

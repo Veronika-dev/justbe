@@ -10,6 +10,13 @@ export default function Interactive() {
         <p className="text-base text-tx-primary whitespace-pre-line">
           { t('interactiveReadMore') }
         </p>
+        <p className="text-sm text-gray-500 mt-4">
+          <a href={"https://www.skyinsideuk.com/blogs/the-mental-health-benefits-of-interactive-games"}
+             target="_blank"
+          >
+            {t('source')}: Sky Inside UK
+          </a>
+        </p>
       </ExercisesHeader>
       <InteractiveSelector />
     </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {ArrowLeft} from "lucide-react";
+import Thoughts from "./thoughts";
 
 export default function Question({
   question,
@@ -27,7 +28,7 @@ export default function Question({
         )}
         <h2 className="text-3xl text-center">{ question }</h2>
       </div>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className={`grid ${answers.length === 5 ? 'grid-cols-5' : 'grid-cols-2'} gap-4`}>
         { answers.map((answer) => (
           <Answer
             key={answer.id}
@@ -52,7 +53,23 @@ function Answer({
       onClick={onSelect}
       className="cursor-pointer py-2 px-6 hover:bg-primary/10 rounded-lg transition-colors duration-300"
     >
-      { answer.image && <Image src={answer.image} alt={answer.title} className="w-16 h-16 mx-auto mb-2" /> }
+      {(answer.image || answer.thoughtPace != null) && (
+        <div className="h-80 w-full flex items-center justify-center mb-4">
+          {answer.image ? (
+            <Image
+              src={answer.image}
+              alt={answer.title}
+              className="w-full max-w-80 h-auto"
+              width={answer.width}
+              height={answer.height}
+            />
+          ) : (
+            answer.thoughtPace != null && (
+              <Thoughts pace={answer.thoughtPace} />
+            )
+          )}
+        </div>
+      )}
       <h3 className="text-xl text-center">{ answer.title }</h3>
     </button>
   )

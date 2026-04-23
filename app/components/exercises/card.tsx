@@ -13,7 +13,7 @@ export default function ExercisesCard({ method } : { method: Activity }) {
     <NextLink href={`/exercises/${method}`}>
       {
         methodData.image
-          ? <Image src={ methodData.image } alt={ methodData.title } className="rounded-lg h-32 object-cover" />
+          ? <Image src={ methodData.image } alt={ methodData.title } width={860} height={560} className="rounded-lg w-full" />
           : <div className="rounded-lg h-32 bg-gray-500" />
       }
       <div className="py-4 text-left">

@@ -22,6 +22,15 @@ interface QuestionAnswer {
   value: number;
   image?: string;
   description?: string;
+  width?: number;
+  height?: number;
+  thoughtPace?: 1 | 2 | 3 | 4 | 5;
+}
+
+interface QuestionCheckin {
+  id: string;
+  question: string;
+  answers: QuestionAnswer[];
 }
 
 interface ModeScheme {

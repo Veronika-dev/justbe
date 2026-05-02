@@ -20,6 +20,7 @@
     ],
     "paths": {
       "@/*": ["./app/*"],
+      "~/exercises/*": ["./public/exercises/*"],
       "~/*": ["./app/[locale]/*"]
     }
   },

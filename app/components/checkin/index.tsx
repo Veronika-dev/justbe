@@ -3,7 +3,7 @@
 import { useCheckin } from "@/lib/hooks/useCheckin";
 import Question from "./question";
 import {useTranslations} from "next-intl";
-import {useEffect, useMemo} from "react";
+import {useMemo} from "react";
 import CheckinResult from "@/components/checkin/result";
 import {useCheckinStore} from "@/providers/checkin-store-provider";
 
@@ -38,22 +38,16 @@ export default function Checkin() {
         question: t(`q3`),
         answers: [
           {id: 1, title: t(`answers3.0`), value: 2, image: '/mascot/no.svg', width: 480, height: 448},
-          {id: 2, title: t(`answers3.1`), value: 0, image: '/mascot/yes.svg', width: 560, height: 474}
+          {id: 2, title: t(`answers3.1`), value: 0, image: '/mascot/yes2.svg', width: 560, height: 474}
         ]
       }
     ]
   }, [t]);
 
-  const { currentStep, handleAnswer, handleBack, canGoBack, isComplete, getResult, resetResult } = useCheckin();
-
   const { setCurrentResult } = useCheckinStore((state) => state)
-
-  useEffect(() => {
-    setCurrentResult(getResult())
-  }, [isComplete])
+  const { currentStep, handleAnswer, handleBack, canGoBack, isComplete, result, resetResult } = useCheckin(setCurrentResult);
 
   if (isComplete) {
-    const result = getResult();
     if (result) {
       return (
         <CheckinResult result={result} resetResult={resetResult} />

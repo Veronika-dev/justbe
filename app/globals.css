@@ -55,15 +55,18 @@ body {
     @apply bg-primary-100 backdrop-blur-sm px-8 py-8 border border-primary-200 rounded-xl;
   }
   .button-linear {
-    @apply text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5;
+    @apply text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 cursor-pointer;
   }
   .btn-linear-outline {
-    @apply relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg bg-linear-to-br from-purple-600 to-blue-500 hover:from-purple-600 hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800;
+    @apply relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg bg-linear-to-br from-purple-600 to-blue-500 hover:from-purple-600 hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 cursor-pointer;
   }
   .btn-linear-outline span {
     @apply relative px-4 py-2.5 transition-all ease-in duration-75 bg-background rounded-lg hover:bg-transparent hover:dark:bg-transparent leading-5;
   }
   .btn-unobtrusive {
     @apply rounded-md bg-white/10 cursor-pointer px-6 py-1.5 font-normal inset-ring inset-ring-white/5 hover:bg-white/20 sm:mt-0 sm:w-auto text-base transition-colors duration-300 ease-in-out;
+  }
+  .btn-big-accent {
+    @apply text-xl px-12 py-4 rounded-xl;
   }
 }

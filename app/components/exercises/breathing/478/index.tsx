@@ -3,8 +3,9 @@
 import {useEffect, useMemo, useState} from "react";
 import {useTranslations} from "next-intl";
 import styles from './style.module.css'
+import BreathingAnimation from "@/components/exercises/breathing/animation";
 
-const lapCountsFinish = 26
+const lapCountsFinish = 7
 
 export default function Breathing478Animation({ finishExerciseAction }: { finishExerciseAction: () => void }) {
   const t = useTranslations('Method.breathingSteps')
@@ -72,12 +73,17 @@ export default function Breathing478Animation({ finishExerciseAction }: { finish
     }
   }, [rotation, intervalTime])
 
+  const status: BreathingAnimationStatus = (!step || step === 'hold1' || step === 'hold2') ? 'hold' : step
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="w-80 h-80 relative rounded-full bg-primary/30 p-8">
         <div className={`w-80 h-80 absolute top-0 left-0 rounded-full bg-primary/15 ${styles.sectorHold}`}/>
         <div className={`w-80 h-80 absolute top-0 left-0 rounded-full bg-primary/30 ${styles.sectorExhale}`}/>
-        <div className="rounded-full bg-primary w-full h-full flex items-center justify-center relative">
+        <div className="rounded-full bg-primary w-full h-full flex flex-col items-center justify-center relative">
+          <div className="w-[60%] h-[60%] flex items-center justify-center mb-2">
+            <BreathingAnimation status={status} duration={intervalTime} />
+          </div>
           {
             step
               ? <p className="text-center text-lg uppercase">{ t(step) }</p>

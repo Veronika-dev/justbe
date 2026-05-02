@@ -61,6 +61,7 @@ interface ChooseItem<T> {
 // Breathing
 type BreathingStep = 'inhale' | 'exhale' | 'hold' | 'hold1' | 'hold2'
 type BreatingType = 'box' | '478'
+type BreathingAnimationStatus = "inhale" | "exhale" | "hold";
 
 // Interactive
 type InteractiveType = 'sand' | 'lines'

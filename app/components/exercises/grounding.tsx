@@ -30,16 +30,18 @@ export default function Grounding() {
       {
         currentStep === 0
           ? <div>
-              <BreathingBox showStartScreen={false} />
-              <p>{ t(`groundingSteps.start`) }</p>
+            <p className="max-w-2/3 text-center mx-auto mb-8">{ t(`groundingSteps.start`) }</p>
+            <BreathingBox finishExerciseAction={goNextStep} />
             </div>
           : currentStepInfo && <StepItem step={currentStepInfo} />
       }
       {
         currentStep < 6
-          ? <button onClick={goNextStep} className="bg-primary px-4 py-2 rounded-lg mt-4">
-              { currentStep === 0 ? t('start') : t('continue') }
-            </button>
+          ? <div className="text-center mt-2">
+              <button onClick={goNextStep} className="button-linear btn-big-accent">
+                { currentStep === 0 ? t('start') : t('continue') }
+              </button>
+            </div>
           : <FinalStep usedMethod="grounding" onRestart={restart} />
       }
     </div>

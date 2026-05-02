@@ -2,8 +2,9 @@
 
 import {useEffect, useMemo, useState} from "react";
 import {useTranslations} from "next-intl";
+import BreathingAnimation from "@/components/exercises/breathing/animation";
 
-const lapCountsFinish = 30
+const lapCountsFinish = 8
 
 export default function BreathingBoxAnimation({ finishExerciseAction }: { finishExerciseAction: () => void }) {
   const t = useTranslations('Method.breathingSteps')
@@ -83,14 +84,19 @@ export default function BreathingBoxAnimation({ finishExerciseAction }: { finish
     }
   }, [step])
 
+  const status: BreathingAnimationStatus = (!step || step === 'hold1' || step === 'hold2') ? 'hold' : step
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="w-80 h-80 relative rounded-3xl bg-primary/30 p-8">
-        <div className="rounded-[0.875rem] bg-primary/30 w-full h-full flex items-center justify-center">
+        <div className="relative rounded-[0.875rem] bg-primary/30 w-full h-full flex flex-col items-center justify-center">
+          <div className="w-[70%] h-[70%] flex items-center justify-center mb-2">
+            <BreathingAnimation status={status} />
+          </div>
           {
             step
-              ? <p className="text-center text-lg uppercase">{ step === 'hold1' || step === 'hold2' ? t('hold') : t(step) }</p>
-              : <p className="text-center text-xl">{ timerToStart }</p>
+              ? <p className="relative text-center text-lg uppercase">{ step === 'hold1' || step === 'hold2' ? t('hold') : t(step) }</p>
+              : <p className="relative text-center text-xl">{ timerToStart }</p>
           }
         </div>
         <div className="w-7 h-7 absolute top-0 left-0 bg-primary rounded-full transition-transform duration-4000 ease-[cubic-bezier(.38,.53,.51,.6)]" style={circleStyle} />

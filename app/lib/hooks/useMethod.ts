@@ -5,17 +5,13 @@ export function useMethod(method: Activity): { methodData: MethodData | null } {
   const t = useTranslations('Method')
 
   const methodData: MethodData | null = useMemo(() => {
-    return getMethod() || null
-  }, [method]);
-
-  function getMethod() {
     return {
       id: method,
       title: t(method),
       description: t(`${method}Description`),
-      image: `/mascot/grounding.webp`, // `/mascot/${method}.webp`,
+      image: `/exercises/${method}.png`,
     }
-  }
+  }, [method, t]);
 
   return {
     methodData,

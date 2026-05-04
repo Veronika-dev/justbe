@@ -9,7 +9,7 @@ export function useMethod(method: Activity): { methodData: MethodData | null } {
       id: method,
       title: t(method),
       description: t(`${method}Description`),
-      image: `/exercises/${method}.png`,
+      image: `/exercises/${method}.webp`,
     }
   }, [method, t]);
 

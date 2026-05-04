@@ -44,6 +44,8 @@
     "change": "Select another",
     "retakeTest": "Retake test"
   },
+  "exercisesDesc": "Choose an exercise that suits your mood and goals",
+  "exercisesBottom": "Every exercise is a step toward peace and harmony",
   "Method": {
     "start": "Start",
     "grounding": "Grounding",

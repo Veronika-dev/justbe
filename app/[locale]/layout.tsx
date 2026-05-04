@@ -32,7 +32,7 @@ export default async function RootLayout({
       lang={locale}
       className={`${manrope.variable} h-full antialiased theme-dark`}
     >
-      <body className="min-h-full flex align-items-center ps-40 py-8">
+      <body className="min-h-full flex align-items-center ps-40">
         <CheckinStoreProvider>
           <Sidebar />
           <NextIntlClientProvider>{children}</NextIntlClientProvider>

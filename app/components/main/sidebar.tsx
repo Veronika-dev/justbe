@@ -1,24 +1,45 @@
 import { useTranslations } from 'next-intl'
-import { CloudFog, MoonStar, Sunrise, ThermometerSun, Bolt } from 'lucide-react';
+import { Cloud, MoonStar, Sunrise, ThermometerSun, Settings } from 'lucide-react';
 import LinkStated from "@/components/main/link-stated";
+import Image from 'next/image'
 
 const menuItems = {
   'checkin': '/',
   'exercises': '/exercises',
-  // 'tests': '/tests',
-  // 'diary': '/diary',
-  // 'settings': '/settings'
+  'tests': '/tests',
+  'diary': '/diary',
+  'settings': '/settings'
 }
 
 export default function Sidebar() {
+  const t = useTranslations('App')
   return (
-    <nav className="flex flex-row md:flex-col align-items-center justify-center gap-8 px-4 fixed top-0 left-0 bottom-0">
-      {
-        Object.entries(menuItems).map(([key, value]) => (
-          <MenuItem key={key} name={key} href={value} />
-        ))
-      }
-    </nav>
+    <div className="fixed top-0 left-0 bottom-0 p-8">
+      <nav className="flex flex-col items-stretch justify-start
+        border border-primary-200 bg-primary-100/50
+        gap-2 px-3 h-full rounded-3xl w-60"
+      >
+        <div className="text-center pt-4">
+          <Image src="/logo-sidebar.svg" width={226} height={196} alt="Logo" className="w-3/5 mx-auto" />
+          <div className="text-2xl mt-3 mb-1">{ t('title') }</div>
+          <div className="text-gray-400/80 text-sm">{ t('motto') }</div>
+        </div>
+        <div className="mt-16 flex flex-col gap-2">
+          {
+            Object.entries(menuItems).map(([key, value]) => (
+              <MenuItem key={key} name={key} href={value} />
+            ))
+          }
+        </div>
+        <div className="flex items-center pb-6 gap-4 mt-auto">
+          <Image src="/avatar.svg" alt="Avatar" width={50} height={50} className="rounded-full" />
+          <div className="flex flex-col">
+            <span className="text-sm font-medium mb-1">Капибара</span>
+            <span className="text-xs text-gray-400/80">Настроение: спокойно</span>
+          </div>
+        </div>
+      </nav>
+    </div>
   )
 }
 
@@ -27,10 +48,13 @@ function MenuItem({ name, href }: { name: string, href: string }) {
   return (
     <LinkStated href={href}
                 exact={true}
-                activeClassName="opacity-100 bg-primary/10"
-                className="flex flex-col align-items-center justify-center text-center gap-2 p-2 text-primary opacity-80 hover:opacity-100 hover:bg-primary/10 rounded-lg transition-colors transition-duration-300">
+                activeClassName="bg-primary/15 text-primary"
+                className="flex items-center justify-start text-left
+                gap-3 py-4 px-4 text-gray-400/80
+                hover:bg-primary/10 rounded-lg
+                transition-colors transition-duration-300">
       { MenuIcon(name) }
-      <span className="text-xs uppercase tracking-widest">{ t(name) }</span>
+      <span className="text-sm">{ t(name) }</span>
     </LinkStated>
   )
 }
@@ -38,15 +62,15 @@ function MenuItem({ name, href }: { name: string, href: string }) {
 function MenuIcon(name: string) {
   switch (name) {
     case 'checkin':
-      return <CloudFog size={20} className="mx-auto" />
+      return <Cloud size={22} />
     case 'exercises':
-      return <Sunrise size={20} className="mx-auto" />
+      return <Sunrise size={22} />
     case 'tests':
-      return <ThermometerSun size={20} className="mx-auto" />
+      return <ThermometerSun size={22} />
     case 'diary':
-      return <MoonStar size={20} className="mx-auto" />
+      return <MoonStar size={22} />
     case 'settings':
-      return <Bolt size={20} className="mx-auto" />
+      return <Settings size={22} />
     default:
       return null
   }

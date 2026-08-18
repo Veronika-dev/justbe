@@ -30,6 +30,7 @@ interface QuestionAnswer {
 interface QuestionCheckin {
   id: string;
   question: string;
+  description: string;
   answers: QuestionAnswer[];
 }
 

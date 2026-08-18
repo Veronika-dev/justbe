@@ -4,12 +4,14 @@ import Thoughts from "./thoughts";
 
 export default function Question({
   question,
+  description,
   answers,
   canGoBack = false,
   onBack,
   onAnswer
 }: {
   question: string;
+  description: string;
   answers: QuestionAnswer[];
   onAnswer: (value: number) => void;
   canGoBack: boolean;
@@ -26,7 +28,8 @@ export default function Question({
             <ArrowLeft size={20} />
           </button>
         )}
-        <h2 className="text-3xl text-center">{ question }</h2>
+        <h2 className="text-3xl text-center mb-2">{ question }</h2>
+        <p className="text-base text-center opacity-80">{ description }</p>
       </div>
       <div className={`grid ${answers.length === 5 ? 'grid-cols-5' : 'grid-cols-2'} gap-4`}>
         { answers.map((answer) => (

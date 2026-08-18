@@ -14,6 +14,7 @@ export default function Checkin() {
       {
         id: 'q1',
         question: t(`q1`),
+        description: t(`description`),
         answers: [
           {id: 1, title: t(`answers1.0`), value: 1, image: '/mascot/sleepy.svg', width: 739, height: 422},
           {id: 2, title: t(`answers1.1`), value: 2, image: '/mascot/calm.svg', width: 434, height: 534},
@@ -25,6 +26,7 @@ export default function Checkin() {
       {
         id: 'q2',
         question: t(`q2`),
+        description: t(`description`),
         answers: [
           {id: 1, title: t(`answers2.0`), value: 1, thoughtPace: 1},
           {id: 2, title: t(`answers2.1`), value: 2, thoughtPace: 2},
@@ -36,6 +38,7 @@ export default function Checkin() {
       {
         id: 'q3',
         question: t(`q3`),
+        description: t(`description`),
         answers: [
           {id: 1, title: t(`answers3.0`), value: 2, image: '/mascot/no.svg', width: 480, height: 448},
           {id: 2, title: t(`answers3.1`), value: 0, image: '/mascot/yes2.svg', width: 560, height: 474}
@@ -61,6 +64,7 @@ export default function Checkin() {
     <>
       <Question
         question={currentQuestion.question}
+        description={currentQuestion.description}
         answers={currentQuestion.answers}
         canGoBack={canGoBack}
         onAnswer={handleAnswer}

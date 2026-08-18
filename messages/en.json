@@ -18,6 +18,7 @@
     "readMore": "Read more"
   },
   "Checkin": {
+    "description": "Choose what feels closest right now, and we’ll suggest an exercise",
     "q1": "How does your body feel?",
     "answers1": [
       "Relaxed",

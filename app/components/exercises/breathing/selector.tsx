@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import {useMemo, useState} from "react";
 import {useCheckinStore} from "@/providers/checkin-store-provider";
 import Breathing478Animation from "@/components/exercises/breathing/478";
@@ -33,13 +34,8 @@ export default function BreathingSelector({ showStartScreen = true }: BreathingB
       {
         startScreen
           ? <div className="card-background">
-              <p>
-                Тут сменяются картинки с продолжительностью-прогрессбаром.
-                1. Choose whatever position feels most relaxing: sitting, standing with your back straight or lying down with your arms by your side.
-                2. Close your eyes if it feels right for you.
-                3. relax your shoulders, release any tension in your jaw and let your body settle
-                4. You are ready to start.
-              </p>
+              <p className="max-w-1/2 text-center mx-auto mb-8">{ tMethod(`prepare`) }</p>
+              <Image src="/mascot/lay-down.svg" alt="Relax" width={350} height={294} className="mx-auto mt-4" />
             </div>
           :
           !finished && <div className="card-background">

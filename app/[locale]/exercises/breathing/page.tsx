@@ -9,7 +9,7 @@ export default function Breathing() {
   const t = useTranslations('Method')
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-10 py-8">
       <ExercisesHeader title={ t('breathing') }>
         <BreathingReadMore />
       </ExercisesHeader>

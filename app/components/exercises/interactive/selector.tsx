@@ -11,7 +11,8 @@ import Image from "next/image";
 
 export default function InteractiveSelector() {
   const t = useTranslations('Common')
-  const tMethod = useTranslations('Method.interactiveSteps')
+  const tMethod = useTranslations('Method')
+  const tMethodSteps = useTranslations('Method.interactiveSteps')
 
   const [startScreen, setStartScreen] = useState(true)
   const [finished, setFinished] = useState(false)
@@ -19,7 +20,7 @@ export default function InteractiveSelector() {
 
   const interactiveTypesList = interactiveTypes.map(item => ({
     id: item,
-    title: tMethod(item),
+    title: tMethodSteps(item),
   }))
 
   useEffect(() => {
@@ -30,12 +31,16 @@ export default function InteractiveSelector() {
     }
   }, [startScreen])
 
+  const restart = () => {
+    setFinished(false)
+  }
+
   return (
     <>
       {
         finished
           ? <div className="card-background">
-              <FinalStep usedMethod="interactive" />
+              <FinalStep usedMethod="interactive" onRestart={restart} />
             </div>
           : <div className="card-background p-0 overflow-hidden" style={{ height: '70vh' }}>
               {
@@ -45,7 +50,7 @@ export default function InteractiveSelector() {
               }
               {
                 <div className={`text-center absolute top-0 left-0 w-full h-full inset-0 flex flex-col items-center justify-center p-4 transition-opacity duration-500 ease-in-out pointer-events-none ${startScreen ? 'opacity-100' : 'opacity-0'}`}>
-                  <h2 className="text-4xl font-bold mb-4 max-w-1/2">{tMethod('touchScreenToStart') }</h2>
+                  <h2 className="text-4xl font-bold mb-4 max-w-1/2">{tMethodSteps('touchScreenToStart') }</h2>
                   <Image src="/img-touch.png" alt="Touch screen" width={120} height={120} />
                 </div>
               }
@@ -53,8 +58,8 @@ export default function InteractiveSelector() {
       }
       <div className="card-background mt-4 flex justify-between items-center">
         <ChooseType<InteractiveType> list={interactiveTypesList} value={type} setValue={setType} />
-        <button onClick={() => setFinished(true)} className="btn-linear-outline">
-          <span>{t('stop') }</span>
+        <button onClick={() => finished ? restart() : setFinished(true)} className="btn-linear-outline">
+          <span>{ finished ? tMethod('retakeTest') : t('stop') }</span>
         </button>
       </div>
     </>

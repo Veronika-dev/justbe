@@ -59,15 +59,16 @@
       "2": "Acknowledge FOUR things you can touch around you",
       "2desc": "It could be your hair, a pillow, or the ground under your feet",
       "3": "Acknowledge THREE things you hear",
-      "3desc": "This could be any external sound. If you can hear your belly rumbling that counts! Focus on things you can hear outside of your body",
+      "3desc": "This could be any external sound",
       "4": "Acknowledge TWO things you can smell",
-      "4desc": "Maybe you are in your office and smell pencil, or maybe you are in your bedroom and smell a pillow. If you need to take a brief walk to find a scent you could smell soap in your bathroom, or nature outside",
+      "4desc": "Maybe you are in your office and smell pencil, or maybe you are in your bedroom and smell a pillow",
       "5": "Acknowledge ONE thing you can taste",
       "5desc": "What does the inside of your mouth taste like—gum, coffee, or the sandwich from lunch?"
     },
     "breathing": "Breathing",
     "breathingDescription": "Controlling your breathing using a special technique",
     "breathingTypes": {
+      "prepare": "Get into the position that's most comfortable for you, relax your shoulders, and click “Start.”",
       "box": "Box breathing",
       "boxDescription": "To begin box breathing, sit or stand with your back straight. Or, if you prefer, you can lie down with your arms by your side. Choose whatever position feels most relaxing.\n\n      Close your eyes if it feels right for you.\n\n      Take a moment to relax your shoulders, release any tension in your jaw and let your body settle. Then follow the steps below.\n\n1. Breathe in slowly to a count of 4. If you want to, place your hands on your belly and feel it expand like a balloon.\n2. After breathing in, hold your breath for another count of 4.\n3. Breathe out slowly and steadily through your mouth, again counting to 4 in your mind.\n4. After breathing out, hold your breath again for another count of 4.\n5. Go back to step 1 and repeat the process for as long as you want to.",
       "478": "4-7-8 breathing technique",
@@ -230,6 +231,80 @@
     },
     "pmr": "Progressive muscle relaxation",
     "pmrDescription": "Techniques for physically relaxing the body",
+    "pmrReadMore": "Progressive muscle relaxation (PMR) is an actively engaging relaxation technique developed by Edmund Jacobson in the 1920s. PMR involves participants actively contracting muscles to create tension and progressively releasing this. The routine is repeated until participants acquire complete relaxation.\n\nThis technique utilizes the principles of neuronal “top-down” and “bottom-up” processing to achieve results. In “top-down” processing, participants use areas higher in the nervous system like the cerebral cortex and the cerebellum to contract muscles and gradually release the tension.\n\nIn “bottom-up” processing, the holding and releasing of bodily tension produce proprioceptive stimulation from peripheral muscles that ascends to the brain via the spinal cord and the brainstem. With both stimulatory passages activated, PMR provides participants with quick and immediate relief.",
+    "pmrSteps": {
+      "prepareTitle": "Prepare",
+      "startTitle": "Relax",
+      "startDescription": "Find a comfortable position, release your shoulders, and take a few calm breaths. Start when you are ready.",
+      "startImageAlt": "Starting position for progressive muscle relaxation",
+      "phases": {
+        "intro": "Starting position",
+        "tense": "Gently tense",
+        "tenseHold": "Hold the tension",
+        "relaxing": "Gently release",
+        "relaxHold": "Relaxation"
+      },
+      "forehead": {
+        "title": "Forehead",
+        "tenseDescription": "Gently raise your eyebrows and tense your forehead. Hold the tension without pain.",
+        "relaxDescription": "Release your forehead. Notice your face becoming smoother and calmer.",
+        "imageAlt": "Forehead muscle tension"
+      },
+      "eyesNose": {
+        "title": "Eyes and nose",
+        "tenseDescription": "Lightly squeeze your eyes shut and wrinkle your nose. Keep the tension gentle.",
+        "relaxDescription": "Relax your eyes, bridge of the nose, and nose. Let your face soften.",
+        "imageAlt": "Eye and nose muscle tension"
+      },
+      "lips": {
+        "title": "Lips",
+        "tenseDescription": "Press your lips together or gently push them forward. Hold the tension.",
+        "relaxDescription": "Release your lips and jaw. Let your mouth and chin relax.",
+        "imageAlt": "Lip muscle tension"
+      },
+      "shoulders": {
+        "title": "Shoulders",
+        "tenseDescription": "Lift your shoulders toward your ears and notice tension in your neck and shoulders.",
+        "relaxDescription": "Drop your shoulders down. Notice heaviness and warmth in your upper body.",
+        "imageAlt": "Shoulder tension"
+      },
+      "back": {
+        "title": "Back",
+        "tenseDescription": "Gently draw your shoulder blades together and lightly tense your back.",
+        "relaxDescription": "Release your back. Let your shoulder blades and spine return to a comfortable position.",
+        "imageAlt": "Back muscle tension"
+      },
+      "arms": {
+        "title": "Arms",
+        "tenseDescription": "Tense your arms from shoulders to forearms. Hold the effort steadily.",
+        "relaxDescription": "Relax your arms. Notice the tension moving down and away.",
+        "imageAlt": "Arm tension"
+      },
+      "hands": {
+        "title": "Hands",
+        "tenseDescription": "Clench your hands into fists. Notice the tension in your palms and fingers.",
+        "relaxDescription": "Open your hands. Let your fingers rest freely.",
+        "imageAlt": "Hand tension"
+      },
+      "belly": {
+        "title": "Belly",
+        "tenseDescription": "Gently tighten your belly muscles without holding your breath.",
+        "relaxDescription": "Release your belly. Breathe calmly and notice the soft movement of your breath.",
+        "imageAlt": "Belly tension"
+      },
+      "legs": {
+        "title": "Legs",
+        "tenseDescription": "Tense your thighs and calves. Keep your feet steady and avoid pain.",
+        "relaxDescription": "Relax your legs. Notice support and heaviness in your thighs and calves.",
+        "imageAlt": "Leg tension"
+      },
+      "toes": {
+        "title": "Toes",
+        "tenseDescription": "Curl or stretch your toes to create light tension.",
+        "relaxDescription": "Release your toes. Let your feet fully relax.",
+        "imageAlt": "Toe tension"
+      }
+    },
     "source": "Method source",
     "more": "Read more",
     "continue": "Continue",

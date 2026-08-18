@@ -5,7 +5,7 @@ import ExercisesGrounding from "@/components/exercises/grounding";
 export default function Grounding() {
   const t = useTranslations('Method')
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-10 py-8">
       <ExercisesHeader title={ t('grounding') }>
         <p className="text-base text-tx-primary whitespace-pre-line">
           { t('groundingReadMore') }

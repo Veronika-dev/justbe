@@ -2,14 +2,16 @@
 
 import {useMemo, useState} from 'react'
 import { ArrowRight, ArrowLeft, ExternalLink, Dices } from 'lucide-react'
-import {creativeTypes} from "@/lib/variables";
+import {creativeImagesMap, creativeTypes} from "@/lib/variables";
 import {useTranslations} from "next-intl";
+import Image from "next/image";
 
 interface CreativeCard {
   id: string
   title: string
   description: string
   link?: string
+  image?: string
 }
 
 export default function CreativeCards() {
@@ -20,7 +22,8 @@ export default function CreativeCards() {
       id: type,
       title: t(`${type}Title`),
       description: t(`${type}Description`),
-      link: t(`link.${type}`)
+      link: t(`link.${type}`),
+      image: creativeImagesMap[type],
     })), [t])
 
   const [index, setIndex] = useState(() => 0)
@@ -62,6 +65,7 @@ export default function CreativeCards() {
           </button>
         </div>
       </div>
+      <p className="text-sm opacity-40">{ t('disclaimer') }</p>
     </div>
   )
 }
@@ -71,6 +75,7 @@ function Card({ card }: { card: CreativeCard }) {
   return (
     <div className="w-full rounded-2xl card-background p-8 min-h-48">
       <div>
+        { card.image && <Image src={`/exercises/creative/${card.image}.webp`} alt="" className="mb-4" width={580} height={400} /> }
         <h2 className="text-2xl font-semibold mb-3">{card.title}</h2>
         <p className="text-base opacity-70 leading-relaxed">{card.description}</p>
       </div>

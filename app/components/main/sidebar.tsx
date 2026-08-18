@@ -6,9 +6,9 @@ import Image from 'next/image'
 const menuItems = {
   'checkin': '/',
   'exercises': '/exercises',
-  'tests': '/tests',
-  'diary': '/diary',
-  'settings': '/settings'
+  // 'tests': '/tests',
+  // 'diary': '/diary',
+  // 'settings': '/settings'
 }
 
 export default function Sidebar() {
@@ -35,7 +35,7 @@ export default function Sidebar() {
           <Image src="/avatar.svg" alt="Avatar" width={50} height={50} className="rounded-full" />
           <div className="flex flex-col">
             <span className="text-sm font-medium mb-1">Капибара</span>
-            <span className="text-xs text-gray-400/80">Настроение: спокойно</span>
+            {/*<span className="text-xs text-gray-400/80">Настроение: спокойно</span>*/}
           </div>
         </div>
       </nav>

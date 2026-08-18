@@ -1,7 +1,7 @@
 {
   "App": {
-    "title": "Calmly",
-    "motto": "Your place of calm"
+    "title": "Be Capy",
+    "motto": "Be Capy. Stay Capy."
   },
   "Menu": {
     "checkin": "Сейчас",
@@ -227,7 +227,9 @@
         "marbling": "https://designmom.com/diy-marbling-with-nail-polish/",
         "fingerKnitting": "https://flaxandtwine.com/blogs/blog/finger-knitting-how-to",
         "doodling": "https://altenew.com/blogs/the-creative-corner/how-do-you-make-doodle-art-a-beginner-s-guide"
-      }
+      },
+
+      "disclaimer": "Links to external websites are provided for reference only. We do not control their content, availability, or privacy policies, and we are not responsible for materials published on external websites."
     },
     "pmr": "Progressive muscle relaxation",
     "pmrDescription": "Techniques for physically relaxing the body",

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import {useMemo, useState} from "react";
+import {useState} from "react";
 import {useCheckinStore} from "@/providers/checkin-store-provider";
 import Breathing478Animation from "@/components/exercises/breathing/478";
 import BreathingBoxAnimation from "@/components/exercises/breathing/box";

@@ -1,14 +1,26 @@
 {
   "App": {
     "title": "Be Capy",
-    "motto": "Be Capy. Stay Capy."
+    "description": "Be Capy helps you choose gentle exercises for easing anxiety, relaxing the body, and returning to a calmer state.",
+    "motto": "Be Capy. Stay Capy",
+    "capy": "Capy"
+  },
+  "Seo": {
+    "homeDescription": "Choose an exercise for how you feel right now: breathing, grounding, body relaxation, calming video, or a gentle creative practice.",
+    "exercisesDescription": "A catalog of calm exercises for easing anxiety, shifting attention, relaxing the body, and returning to the present moment.",
+    "groundingDescription": "The 5-4-3-2-1 grounding exercise helps you reconnect through sight, touch, sound, smell, and taste.",
+    "breathingDescription": "Breathing techniques help you slow down, steady your breath, and gently reduce tension.",
+    "videoDescription": "Calming nature videos help shift attention and support a relaxed state.",
+    "interactiveDescription": "Interactive exercises occupy your attention with simple actions and help reduce anxious thought loops.",
+    "creativeDescription": "Hands-on creative activities help you switch focus, relax, and return to a calmer state.",
+    "pmrDescription": "Progressive muscle relaxation helps you tense and release muscle groups to ease physical tension."
   },
   "Menu": {
-    "checkin": "Сейчас",
-    "exercises": "Упражнения",
-    "tests": "Тесты",
-    "diary": "Дневник",
-    "settings": "Настройки"
+    "checkin": "Now",
+    "exercises": "Exercises",
+    "tests": "Tests",
+    "diary": "Diary",
+    "settings": "Settings"
   },
   "Common": {
     "close": "Close",

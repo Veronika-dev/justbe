@@ -1,3 +1,7 @@
+import { privatePageMetadata } from "@/lib/seo";
+
+export const metadata = privatePageMetadata;
+
 export default function Settings() {
   return (
     <div className="container mx-auto px-4 py-8">

@@ -1,6 +1,6 @@
 'use client'
 
-import {useEffect, useMemo, useState} from "react";
+import {useState} from "react";
 import {useTranslations} from "next-intl";
 import BreathingBox from "@/components/exercises/breathing/box";
 import FinalStep from "@/components/exercises/final-step";

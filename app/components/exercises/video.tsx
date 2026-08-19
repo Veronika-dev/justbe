@@ -8,15 +8,39 @@ const videos = [
   'zHEpbuKrW6w'
 ]
 
+type YouTubePlayer = {
+  destroy: () => void;
+  loadVideoById: (options: { videoId: string; startSeconds: number }) => void;
+  mute: () => void;
+  pauseVideo: () => void;
+  playVideo: () => void;
+  unMute: () => void;
+};
+
+type YouTubeApi = {
+  Player: new (
+    elementId: string,
+    options: {
+      videoId: string;
+      height: string;
+      width: string;
+      playerVars: Record<string, string | number>;
+      events: {
+        onReady: () => void;
+      };
+    },
+  ) => YouTubePlayer;
+};
+
 declare global {
   interface Window {
-    YT: any;
+    YT?: YouTubeApi;
     onYouTubeIframeAPIReady: () => void;
   }
 }
 
 export default function ExercisesVideo() {
-  const playerRef = useRef<any>(null)
+  const playerRef = useRef<YouTubePlayer | null>(null)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const [isReady, setIsReady] = useState(false)
   const [isPlaying, setIsPlaying] = useState(true)
@@ -31,14 +55,17 @@ export default function ExercisesVideo() {
     }
 
     window.onYouTubeIframeAPIReady = () => {
-      playerRef.current = new window.YT.Player('youtube-player', {
-        videoId: videos[currentVideoIndex],
+      const youtubeApi = window.YT;
+      if (!youtubeApi) return;
+
+      playerRef.current = new youtubeApi.Player('youtube-player', {
+        videoId: videos[0],
         height: '100%',
         width: '100%',
         playerVars: {
           autoplay: 1,
           loop: 1,
-          playlist: videos[currentVideoIndex],
+          playlist: videos[0],
           controls: 0,
           modestbranding: 1,
           rel: 0,

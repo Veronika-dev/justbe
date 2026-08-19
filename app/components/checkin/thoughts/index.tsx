@@ -117,7 +117,9 @@ export default function Index({ pace }: { pace: ThoughtPace }) {
   const rafRef = useRef(0);
   const paceRef = useRef(pace);
 
-  paceRef.current = pace;
+  useEffect(() => {
+    paceRef.current = pace;
+  }, [pace]);
 
   useEffect(() => {
     particlesRef.current = createParticles(pace);

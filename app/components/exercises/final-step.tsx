@@ -3,14 +3,12 @@ import {useTranslations} from "next-intl";
 import {Heart} from "lucide-react";
 import { activityList } from '@/lib/variables'
 import ExercisesCard from "@/components/exercises/card";
-import {useMemo} from "react";
 
 export default function FinalStep({ usedMethod, onRestart }: { usedMethod: Activity, onRestart?: () => void }) {
   const t = useTranslations('Method')
-  const method = useMemo(() => {
-    const activityListOther = activityList.filter(activity => activity !== usedMethod)
-    return activityListOther[Math.floor(Math.random() * activityListOther.length)]
-  }, [usedMethod])
+  const currentIndex = activityList.indexOf(usedMethod)
+  const method = activityList[(currentIndex + 1) % activityList.length] ?? activityList[0]
+
   return (
     <div className="text-center">
       <h3 className="text-4xl flex items-center justify-center gap-2 mb-8">

@@ -1,27 +1,59 @@
+import type { Metadata } from "next";
 import {useTranslations} from "next-intl";
+import { getTranslations } from "next-intl/server";
 import ExercisesHeader from "@/components/exercises/header";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import {memo} from "react";
 import BreathingSelector from "@/components/exercises/breathing/selector";
 import {breathingTypes} from "@/lib/variables";
+import { createPageMetadata } from "@/lib/seo";
+import BreadcrumbJsonLd from "@/components/seo/breadcrumb-json-ld";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const tMethod = await getTranslations({ locale, namespace: "Method" });
+  const tSeo = await getTranslations({ locale, namespace: "Seo" });
+
+  return createPageMetadata({
+    locale,
+    path: "/exercises/breathing",
+    title: tMethod("breathing"),
+    description: tSeo("breathingDescription"),
+  });
+}
 
 export default function Breathing() {
   const t = useTranslations('Method')
+  const tApp = useTranslations('App')
+  const tMenu = useTranslations('Menu')
 
   return (
-    <div className="container mx-auto px-10 py-8">
-      <ExercisesHeader title={ t('breathing') }>
-        <BreathingReadMore />
-      </ExercisesHeader>
-      <BreathingSelector />
-      <p className="text-sm text-gray-500 mt-4">
-        <a href={"https://www.bhf.org.uk/informationsupport/heart-matters-magazine/wellbeing/breathing-exercises"}
-           target="_blank"
-        >
-          {t('source')}: British Heart Foundation
-        </a>
-      </p>
-    </div>
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: tApp('title'), path: "/" },
+          { name: tMenu('exercises'), path: "/exercises" },
+          { name: t('breathing'), path: "/exercises/breathing" },
+        ]}
+      />
+      <div className="container mx-auto px-10 py-8">
+        <ExercisesHeader title={ t('breathing') }>
+          <BreathingReadMore />
+        </ExercisesHeader>
+        <BreathingSelector />
+        <p className="text-sm text-gray-500 mt-4">
+          <a href={"https://www.bhf.org.uk/informationsupport/heart-matters-magazine/wellbeing/breathing-exercises"}
+             target="_blank"
+          >
+            {t('source')}: British Heart Foundation
+          </a>
+        </p>
+      </div>
+    </>
   );
 }
 

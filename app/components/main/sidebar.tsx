@@ -34,7 +34,7 @@ export default function Sidebar() {
         <div className="flex items-center pb-6 gap-4 mt-auto">
           <Image src="/avatar.svg" alt="Avatar" width={50} height={50} className="rounded-full" />
           <div className="flex flex-col">
-            <span className="text-sm font-medium mb-1">Капибара</span>
+            <span className="text-sm font-medium mb-1">{ t('capy') }</span>
             {/*<span className="text-xs text-gray-400/80">Настроение: спокойно</span>*/}
           </div>
         </div>

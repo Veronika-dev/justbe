@@ -18,6 +18,10 @@
   "Menu": {
     "checkin": "Now",
     "exercises": "Exercises",
+    "about": "About",
+    "contacts": "Contacts",
+    "privacy": "Privacy",
+    "terms": "Terms",
     "tests": "Tests",
     "diary": "Diary",
     "settings": "Settings"
@@ -334,5 +338,208 @@
       "F": "Take a moment to just be here — and choose next step whenever you're ready.",
       "offeredVariant": "We picked this one"
     }
+  },
+  "About": {
+    "description": "We are here to help you pause and return to a calmer state.",
+    "hero": {
+      "description": "We are here to help you pause and return to a calmer state.",
+      "description1": "Here you will find simple, gentle exercises that help release tension and shift your attention."
+    },
+    "why": {
+      "title": "What this project is for",
+      "paragraph1": "Anxiety affects everyone differently: it can freeze you, send you into panic, make it hard to focus, or even trigger different physical symptoms. Learning to cope with it is a long process of working with a specialist.",
+      "paragraph2": "But in an anxious moment, it is important to help yourself calm down and gather your strength.",
+      "paragraph3": "Be Capy was created to help you stop for a few minutes, breathe out, and feel a little better."
+    },
+    "how": {
+      "title": "How it works"
+    },
+    "steps": {
+      "checkin": {
+        "title": "Anxiety check-in",
+        "text": "When you enter the site, a short check-in helps understand your current state."
+      },
+      "selection": {
+        "title": "Exercise selection",
+        "text": "Based on your answers, we suggest a practice that best fits this moment."
+      },
+      "start": {
+        "title": "Start right now",
+        "text": "You can move straight into the practice and feel relief in the first minutes."
+      }
+    },
+    "features": {
+      "title": "What you will find",
+      "grounding": {
+        "title": "Grounding",
+        "text": "Returns attention to the present moment and helps you feel supported."
+      },
+      "breathing": {
+        "title": "Breathing practices",
+        "text": "Help calm the mind and body through breathing."
+      },
+      "relaxation": {
+        "title": "Body relaxation",
+        "text": "Releases physical tension and fatigue."
+      },
+      "video": {
+        "title": "Calm videos",
+        "text": "Help shift attention and slow down."
+      },
+      "interactive": {
+        "title": "Interactive practices",
+        "text": "Simple activities that support you in the moment."
+      },
+      "creativity": {
+        "title": "Creativity",
+        "text": "Gentle creative activities for inspiration and relaxation."
+      }
+    },
+    "important": {
+      "title": "Important to know",
+      "paragraph1": "Be Capy is not a medical, psychological, or psychiatric service and is not intended to diagnose, treat, or prevent illness.",
+      "paragraph2": "If your condition worsens or symptoms become intense or recurring, contact a doctor, psychologist, psychotherapist, or another qualified specialist."
+    },
+    "urgent": {
+      "title": "Urgent help",
+      "text": "If there is a risk of harm to yourself or others, a threat to life, panic, loss of control, or another emergency, contact local emergency services immediately."
+    },
+    "support": {
+      "title": "You are not alone. We are here.",
+      "text": "Take small pauses for yourself. It is a meaningful step toward calm."
+    }
+  },
+  "Contacts": {
+    "description": "How to contact Be Capy about the website, privacy, and feedback.",
+    "hero": {
+      "description": "Have a question, an idea, or just want\nto tell us something about Be Capy?\nWrite to us — we read every message\nand will do our best to reply."
+    },
+    "connect": {
+      "title": "How to contact us",
+      "description": "Choose the option that works best for you"
+    },
+    "methods": {
+      "email": {
+        "title": "Email",
+        "value": "hello@uspokapi.ru",
+        "description": "We will reply within 1–2 business days"
+      },
+      "telegram": {
+        "title": "Telegram",
+        "value": "@uspokapi_bot",
+        "description": "Send us a message on Telegram",
+        "href": "https://t.me/uspokapi_bot"
+      }
+    },
+    "support": {
+      "title": "We are here",
+      "paragraph1": "Be Capy is created with care for people. It matters to us to keep improving, so we can support you even more gently.",
+      "paragraph2": "Thank you for being with us! 💜"
+    }
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "description": "What data Be Capy uses, why cookies are needed, and what rights users may have.",
+    "updatedAt": "August 19, 2026",
+    "sections": [
+      {
+        "title": "In short",
+        "body": [
+          "Be Capy aims to collect as little data as possible. At this stage, the site uses technical data needed to operate and a cookie that stores the selected interface language.",
+          "We do not ask users to enter their name, medical information, diagnoses, or other sensitive data."
+        ]
+      },
+      {
+        "title": "Data that may be processed",
+        "body": [
+          "Technical data: IP address, browser type, device, requested URL, and request time may be processed by hosting and server infrastructure to display the site, maintain security, and diagnose errors.",
+          "The `locale` cookie: used to remember the selected interface language. This is a functional site preference.",
+          "Exercise or check-in data, if stored only in the user’s browser, is not sent to us as personal data unless server storage or accounts are added later."
+        ]
+      },
+      {
+        "title": "Purposes",
+        "body": [
+          "Displaying the site and its features.",
+          "Saving the language preference.",
+          "Maintaining security, fixing errors, and improving stability.",
+          "Analytics may be added later only after this policy is updated and, where required, a consent mechanism is provided."
+        ]
+      },
+      {
+        "title": "Cookies and analytics",
+        "body": [
+          "The site currently uses a functional language cookie. This cookie supports expected interface behavior.",
+          "If analytics, advertising, or third-party cookies are added later, users will receive information about them and, where required by law, a way to give or withdraw consent.",
+          "Embedded third-party services, such as YouTube videos, may set their own cookies and process data under their own terms when users interact with that content."
+        ]
+      },
+      {
+        "title": "Retention",
+        "body": [
+          "The language cookie is stored for as long as needed to preserve the preference or until the user deletes cookies in the browser.",
+          "Server technical logs, if kept by hosting providers, are retained for the period needed for security, diagnostics, and service operation."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "body": [
+          "Depending on applicable law, you may have rights to request access, rectification, deletion, restriction, portability, or objection to processing.",
+          "For privacy requests, contact us at hello@uspokapi.ru."
+        ]
+      },
+      {
+        "title": "Changes",
+        "body": [
+          "We may update this policy if site features change, including analytics, accounts, contact forms, or other data processing."
+        ]
+      }
+    ]
+  },
+  "Terms": {
+    "title": "Terms of Use",
+    "description": "Rules for using Be Capy, limitation of responsibility, and an important medical disclaimer.",
+    "updatedAt": "August 19, 2026",
+    "sections": [
+      {
+        "title": "Acceptance",
+        "body": [
+          "By using Be Capy, you agree to these terms. If you do not agree, do not use the site."
+        ]
+      },
+      {
+        "title": "Purpose of the site",
+        "body": [
+          "The site provides informational materials and self-help exercises for relaxation and attention shifting.",
+          "The materials are for general wellbeing and are not individual advice."
+        ]
+      },
+      {
+        "title": "Medical disclaimer",
+        "body": [
+          "Be Capy does not replace medical, psychological, or psychiatric help.",
+          "The site is not intended to diagnose, treat, prevent, or cure any condition or to make health decisions.",
+          "If you have symptoms, a diagnosis, severe anxiety, panic attacks, depression, thoughts of self-harm, or any worsening condition, contact a qualified professional."
+        ]
+      },
+      {
+        "title": "Emergencies",
+        "body": [
+          "If there is immediate danger to you or others, contact your local emergency services immediately."
+        ]
+      },
+      {
+        "title": "User responsibility",
+        "body": [
+          "You decide whether an exercise is suitable for you. Stop an exercise if it causes discomfort, worsening symptoms, dizziness, pain, or other unpleasant sensations."
+        ]
+      },
+      {
+        "title": "Changes to the site and terms",
+        "body": [
+          "We may change site content, features, and these terms. The current version is published on this page."
+        ]
+      }
+    ]
   }
 }

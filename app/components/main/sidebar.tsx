@@ -1,18 +1,29 @@
 import { useTranslations } from 'next-intl'
-import { Cloud, MoonStar, Sunrise, ThermometerSun, Settings } from 'lucide-react';
+import { useLocale } from 'next-intl';
+import { Cloud, MoonStar, Settings, BadgeInfo, Sunrise, ThermometerSun } from 'lucide-react';
 import LinkStated from "@/components/main/link-stated";
 import Image from 'next/image'
+import { getSupportedLocale, localizedPath } from "@/lib/seo";
 
 const menuItems = {
   'checkin': '/',
   'exercises': '/exercises',
+  'about': '/about',
   // 'tests': '/tests',
   // 'diary': '/diary',
   // 'settings': '/settings'
 }
 
+const legalMenuItems = {
+  'contacts': '/contacts',
+  'privacy': '/privacy',
+  'terms': '/terms',
+}
+
 export default function Sidebar() {
   const t = useTranslations('App')
+  const locale = getSupportedLocale(useLocale())
+
   return (
     <div className="fixed top-0 left-0 bottom-0 p-8">
       <nav className="flex flex-col items-stretch justify-start
@@ -27,32 +38,38 @@ export default function Sidebar() {
         <div className="mt-16 flex flex-col gap-2">
           {
             Object.entries(menuItems).map(([key, value]) => (
-              <MenuItem key={key} name={key} href={value} />
+              <MenuItem key={key} name={key} href={localizedPath(locale, value)} />
             ))
           }
         </div>
-        <div className="flex items-center pb-6 gap-4 mt-auto">
-          <Image src="/avatar.svg" alt="Avatar" width={50} height={50} className="rounded-full" />
-          <div className="flex flex-col">
-            <span className="text-sm font-medium mb-1">{ t('capy') }</span>
-            {/*<span className="text-xs text-gray-400/80">Настроение: спокойно</span>*/}
-          </div>
+        <div className="border-t border-primary-200 pt-4 flex flex-col gap-1 pb-6 mt-auto">
+          {
+            Object.entries(legalMenuItems).map(([key, value]) => (
+              <MenuItem key={key} name={key} href={localizedPath(locale, value)} compact />
+            ))
+          }
+          {/*<Image src="/avatar.svg" alt="Avatar" width={50} height={50} className="rounded-full" />*/}
+          {/*<div className="flex flex-col">*/}
+          {/*  <span className="text-sm font-medium mb-1">{ t('capy') }</span>*/}
+          {/*  /!*<span className="text-xs text-gray-400/80">Настроение: спокойно</span>*!/*/}
+          {/*</div>*/}
         </div>
       </nav>
     </div>
   )
 }
 
-function MenuItem({ name, href }: { name: string, href: string }) {
+function MenuItem({ name, href, compact = false }: { name: string, href: string, compact?: boolean }) {
   const t = useTranslations('Menu');
   return (
     <LinkStated href={href}
                 exact={true}
                 activeClassName="bg-primary/15 text-primary"
                 className="flex items-center justify-start text-left
-                gap-3 py-4 px-4 text-gray-400/80
+                gap-3 px-4 text-gray-400/80
                 hover:bg-primary/10 rounded-lg
-                transition-colors transition-duration-300">
+                transition-colors transition-duration-300"
+                style={{ paddingTop: compact ? "0.625rem" : "1rem", paddingBottom: compact ? "0.625rem" : "1rem" }}>
       { MenuIcon(name) }
       <span className="text-sm">{ t(name) }</span>
     </LinkStated>
@@ -65,6 +82,14 @@ function MenuIcon(name: string) {
       return <Cloud size={22} />
     case 'exercises':
       return <Sunrise size={22} />
+    case 'about':
+      return <BadgeInfo size={22} />
+    // case 'contacts':
+    //   return <Mail size={22} />
+    // case 'privacy':
+    //   return <Shield size={22} />
+    // case 'terms':
+    //   return <Scale size={22} />
     case 'tests':
       return <ThermometerSun size={22} />
     case 'diary':
@@ -72,6 +97,6 @@ function MenuIcon(name: string) {
     case 'settings':
       return <Settings size={22} />
     default:
-      return null
+      return null;
   }
 }

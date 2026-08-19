@@ -26,6 +26,8 @@ export const absoluteUrl = (locale: SupportedLocale, path: string = "/") =>
   new URL(localizedPath(locale, path), siteUrl).toString();
 
 export const siteImageUrl = new URL("/img-preview.jpg", siteUrl).toString();
+export const contactEmail =
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@example.com";
 
 const openGraphLocales: Record<SupportedLocale, string> = {
   ru: "ru_RU",
@@ -162,6 +164,8 @@ export const privatePageMetadata: Metadata = {
 
 export const publicSeoRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/about", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/contacts", priority: 0.5, changeFrequency: "yearly" },
   { path: "/exercises", priority: 0.9, changeFrequency: "weekly" },
   { path: "/exercises/grounding", priority: 0.8, changeFrequency: "monthly" },
   { path: "/exercises/breathing", priority: 0.8, changeFrequency: "monthly" },
@@ -169,6 +173,8 @@ export const publicSeoRoutes = [
   { path: "/exercises/interactive", priority: 0.7, changeFrequency: "monthly" },
   { path: "/exercises/creative", priority: 0.7, changeFrequency: "monthly" },
   { path: "/exercises/pmr", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/privacy", priority: 0.4, changeFrequency: "yearly" },
+  { path: "/terms", priority: 0.4, changeFrequency: "yearly" },
 ] as const;
 
 export const privateSeoPaths = ["/diary", "/settings", "/tests"] as const;

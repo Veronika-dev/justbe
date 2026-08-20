@@ -219,7 +219,7 @@ export default function PmrExercise() {
 
   return (
     <>
-      <div className="card-background">
+      <div className="card-background px-4 py-4 md:px-8 md:py-8">
         <div className={styles.layout}>
           <div ref={rootRef} className={styles.stage} aria-label={tSteps("startImageAlt")} aria-live="polite" />
 
@@ -239,8 +239,8 @@ export default function PmrExercise() {
         </div>
       </div>
 
-      <div className="card-background mt-4 flex justify-center items-center">
-        <button onClick={started ? stopExercise : startExercise} className="btn-linear-outline" disabled={!isReady}>
+      <div className="card-background mt-4 flex justify-center items-center px-4 py-4 md:px-8 md:py-8">
+        <button onClick={started ? stopExercise : startExercise} className="btn-linear-outline w-full sm:w-auto" disabled={!isReady}>
           <span>{started ? t("stop") : t("start")}</span>
         </button>
       </div>

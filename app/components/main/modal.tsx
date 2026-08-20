@@ -39,7 +39,7 @@ export default function Modal({ activator, content, title, children }: ModalProp
                       {title}
                     </DialogTitle>
                   }
-                  <div className="pb-14 pe-4 overflow-y-auto max-h-[70vh]">
+                  <div className="pb-18 sm:pb-14 pe-4 overflow-y-auto max-h-[70vh]">
                     {
                       children ||
                       <p className="text-base text-gray-400">{ content }</p>

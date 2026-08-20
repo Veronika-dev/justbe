@@ -36,8 +36,8 @@ export default function Exercises() {
           { name: t('Menu.exercises'), path: "/exercises" },
         ]}
       />
-      <div className="container mx-auto px-10 py-8">
-        <h1 className="text-3xl mb-4">{ t('Menu.exercises') }</h1>
+      <div className="container mx-auto px-5 sm:px-8 lg:px-10 py-8">
+        <h1 className="text-3xl mb-4 mt-12 lg:mt-0">{ t('Menu.exercises') }</h1>
         <p className="text-base mb-8 opacity-80">{ t('exercisesDesc') }</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {
@@ -48,7 +48,7 @@ export default function Exercises() {
         </div>
         <div className="flex items-center justify-center gap-2 mt-8">
           <Sparkles width={20} height={20} className="text-yellow-600" />
-          <span className="text-white/50">{ t('exercisesBottom') }</span>
+          <span className="text-white/50 text-sm md:text-base">{ t('exercisesBottom') }</span>
           <Heart width={20} height={20} className="text-white/50" />
         </div>
       </div>

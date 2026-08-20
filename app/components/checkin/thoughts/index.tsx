@@ -141,10 +141,11 @@ export default function Index({ pace }: { pace: ThoughtPace }) {
     const syncCanvasSize = () => {
       const w = wrap.clientWidth;
       const h = wrap.clientHeight;
+      const innerW = wrap.offsetWidth;
       canvas.width = Math.max(1, Math.floor(w * dpr));
       canvas.height = Math.max(1, Math.floor(h * dpr));
-      canvas.style.width = `${w}px`;
-      canvas.style.height = `${h}px`;
+      canvas.style.width = `${innerW < 640 ? 200 : w}px`;
+      canvas.style.height = `${innerW < 640 ? 200 : h}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 

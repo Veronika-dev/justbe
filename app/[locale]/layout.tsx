@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type {Metadata, Viewport} from "next";
 import "@/globals.css";
 import {manrope} from "@/ui/fonts";
 import { getTranslations } from 'next-intl/server';
@@ -43,6 +43,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+  colorScheme: "dark",
+  themeColor: "#060b10",
+};
+
 export default async function RootLayout({
                                      params, children,
 }: Readonly<{
@@ -67,12 +77,14 @@ export default async function RootLayout({
       lang={locale}
       className={`${manrope.variable} h-full antialiased theme-dark`}
     >
-      <body className="min-h-full flex align-items-center ps-70">
+      <body className="min-h-full flex align-items-center ps-0 lg:ps-70">
         <JsonLd data={websiteJsonLd} />
         <JsonLd data={organizationJsonLd} />
         <CheckinStoreProvider>
-          <Sidebar />
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider>
+            <Sidebar />
+            {children}
+          </NextIntlClientProvider>
         </CheckinStoreProvider>
       </body>
     </html>

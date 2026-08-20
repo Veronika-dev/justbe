@@ -40,7 +40,7 @@ export default function Breathing() {
           { name: t('breathing'), path: "/exercises/breathing" },
         ]}
       />
-      <div className="container mx-auto px-10 py-8">
+      <div className="container mx-auto px-5 sm:px-8 lg:px-10 py-8">
         <ExercisesHeader title={ t('breathing') }>
           <BreathingReadMore />
         </ExercisesHeader>
@@ -67,7 +67,7 @@ const BreathingReadMore = memo(function BreathingReadMore() {
           {breathingTypes.map((name: BreatingType) => (
             <Tab
               key={name}
-              className="rounded-full px-3 py-1 text-sm/6 font-semibold focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-white/5 data-selected:bg-white/10 data-selected:data-hover:bg-white/10"
+              className="rounded-full leading-5 px-3 py-1 text-sm/6 font-semibold focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-white/5 data-selected:bg-white/10 data-selected:data-hover:bg-white/10"
             >
               { t(name) }
             </Tab>

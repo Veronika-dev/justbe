@@ -8,7 +8,7 @@ export default function ChooseBreathingType<T extends string>({ list, value, set
   return (
     <Listbox value={value} onChange={setValue}>
       <ListboxButton
-        className="relative w-60 rounded-lg border border-primary/30 py-1.5 pr-8 pl-3 text-left text-sm/6 text-white focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+        className="relative w-full sm:w-60 rounded-lg border border-primary/30 py-1.5 pr-8 pl-3 text-left text-sm/6 text-white focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
       >
         { currentValue?.title }
         <ChevronDown

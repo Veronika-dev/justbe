@@ -38,7 +38,7 @@ export default function Pmr() {
           { name: tMethod('pmr'), path: "/exercises/pmr" },
         ]}
       />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-5 sm:px-8 lg:px-10 py-8">
         <ExercisesHeader title={ tMethod('pmr') }>
           <p className="text-base text-tx-primary whitespace-pre-line">
             { tMethod('pmrReadMore') }

@@ -11,13 +11,13 @@ export default function FinalStep({ usedMethod, onRestart }: { usedMethod: Activ
 
   return (
     <div className="text-center">
-      <h3 className="text-4xl flex items-center justify-center gap-2 mb-8">
+      <h3 className="text-2xl sm:text-4xl flex items-center justify-center gap-2 mb-4 md:mb-8">
         <span>{ t('wellDone.M') }</span>
         <Heart className="text-primary" size={30} />
       </h3>
       <p className="text-base">{ t('finalStep.M') }</p>
-      <div className="max-w-1/3 mx-auto mb-16 mt-16">
-        <p className="text-xl text-left mb-2">{ t('finalStep.offeredVariant') }</p>
+      <div className="w-full max-w-sm md:max-w-1/2 lg:max-w-1/3 mx-auto mb-8 sm:mb-16 mt-8 sm:mt-16">
+        <p className="text-lg sm:text-xl text-left mb-2">{ t('finalStep.offeredVariant') }</p>
         <ExercisesCard method={method} />
       </div>
       <div>
@@ -26,7 +26,7 @@ export default function FinalStep({ usedMethod, onRestart }: { usedMethod: Activ
             { t('retakeTest') }
           </button>
         }
-        <NextLink href="/exercises" className="bg-primary px-4 py-2 rounded-lg mt-4">
+        <NextLink href="/exercises" className="inline-block bg-primary px-4 py-2 rounded-lg mt-4">
           { t('chooseAnother') }
         </NextLink>
       </div>

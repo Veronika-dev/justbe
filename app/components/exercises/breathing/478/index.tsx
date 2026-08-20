@@ -95,7 +95,7 @@ export default function Breathing478Animation({ finishExerciseAction }: { finish
         </div>
       </div>
       <div className="mt-8 min-h-10">
-        { step && firstLap && <p className="text-lg opacity-60 text-center">
+        { step && firstLap && <p className="text-base md:text-lg opacity-60 text-center">
             { t(`${step}478Description`) }
           </p>
         }

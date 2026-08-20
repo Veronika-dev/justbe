@@ -101,8 +101,8 @@ export default function BreathingBoxAnimation({ finishExerciseAction }: { finish
         </div>
         <div className="w-7 h-7 absolute top-0 left-0 bg-primary rounded-full transition-transform duration-4000 ease-[cubic-bezier(.38,.53,.51,.6)]" style={circleStyle} />
       </div>
-      <div className="mt-8 min-h-10">
-        { step && firstLap && <p className="text-lg opacity-60 text-center">
+      <div className="mt-8 sm:min-h-10">
+        { step && firstLap && <p className="text-base md:text-lg opacity-60 text-center">
             { step === 'hold1' || step === 'hold2' ? t('holdDescription') : t(`${step}Description`) }
           </p>
         }

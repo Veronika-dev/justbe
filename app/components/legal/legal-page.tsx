@@ -27,23 +27,26 @@ export default function LegalPage({
           { name: content.title, path },
         ]}
       />
-      <main className="container mx-auto px-10 py-10">
-        <p className="mb-3 text-sm text-tx-secondary">
-          {content.updatedAt}
-        </p>
-        <h1 className="mb-4 text-4xl font-semibold text-tx-primary">
-          {content.title}
-        </h1>
-        <p className="mb-8 text-lg text-tx-secondary">
-          {content.description}
-        </p>
+      <main className="container mx-auto px-5 py-8 sm:px-8 lg:px-10">
+        <div className="mt-12 lg:mt-0">
+          {content.updatedAt ? (
+            <p className="mb-3 text-sm text-tx-secondary">
+              {content.updatedAt}
+            </p>
+          ) : null}
+          <h1 className="mb-4 text-3xl">{content.title}</h1>
+          <p className="mb-8 text-base opacity-80">{content.description}</p>
+        </div>
         <div className="space-y-6">
           {content.sections.map((section) => (
-            <section key={section.title} className="card-background">
-              <h2 className="mb-3 text-2xl font-semibold text-tx-primary">
+            <section
+              key={section.title}
+              className="card-background rounded-2xl px-6 py-6 sm:px-8 sm:py-8"
+            >
+              <h2 className="mb-4 text-xl font-semibold leading-snug text-tx-primary sm:text-2xl">
                 {section.title}
               </h2>
-              <div className="space-y-3 text-base leading-7 text-foreground">
+              <div className="space-y-3 text-sm leading-6 text-foreground/80 sm:text-base sm:leading-7">
                 {section.body.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}

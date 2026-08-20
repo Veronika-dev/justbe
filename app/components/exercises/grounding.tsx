@@ -30,7 +30,7 @@ export default function Grounding() {
       {
         currentStep === 0
           ? <div>
-            <p className="max-w-2/3 text-center mx-auto mb-8">{ t(`groundingSteps.start`) }</p>
+            <p className="text-center mx-auto mb-8 sm:max-w-3/4 md:max-w-1/2">{ t(`groundingSteps.start`) }</p>
             <BreathingBox finishExerciseAction={goNextStep} />
             </div>
           : currentStepInfo && <StepItem step={currentStepInfo} />
@@ -38,7 +38,7 @@ export default function Grounding() {
       {
         currentStep < 6
           ? <div className="text-center mt-6">
-              <button onClick={goNextStep} className="button-linear btn-big-accent">
+              <button onClick={goNextStep} className="button-linear w-full sm:w-auto sm:rounded-xl sm:px-12 sm:py-4 sm:text-xl">
                 { currentStep === 0 ? t('start') : t('continue') }
               </button>
             </div>
@@ -51,7 +51,7 @@ export default function Grounding() {
 function StepItem({ step }: { step: Step }) {
   return (
     <div>
-      <div className="text-9xl text-center">{step.stepNumber}</div>
+      <div className="text-7xl sm:text-9xl text-center">{step.stepNumber}</div>
       <h2 className="text-xl font-bold text-center mt-4">{step.title}</h2>
       <p className="text-center mt-2">{step.description}</p>
     </div>

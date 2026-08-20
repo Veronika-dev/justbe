@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
 export const supportedLocales = ["ru", "en"] as const;
+export const localesNames: Record<(typeof supportedLocales)[number], string> = {
+  ru: 'Русский',
+  en: 'English',
+}
 export const defaultLocale = "ru";
 
 export type SupportedLocale = (typeof supportedLocales)[number];

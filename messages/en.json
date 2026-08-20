@@ -3,7 +3,9 @@
     "title": "Be Capy",
     "description": "Be Capy helps you choose gentle exercises for easing anxiety, relaxing the body, and returning to a calmer state.",
     "motto": "Be Capy. Stay Capy",
-    "capy": "Capy"
+    "capy": "Capy",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "Seo": {
     "homeDescription": "Choose an exercise for how you feel right now: breathing, grounding, body relaxation, calming video, or a gentle creative practice.",
@@ -31,7 +33,8 @@
     "start": "Start",
     "stop": "Stop",
     "source": "Source",
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "disclaimerExternal": "We do not control the content, availability, or privacy policies of external websites and video resources, and we are not responsible for them."
   },
   "Checkin": {
     "description": "Choose what feels closest right now, and we’ll suggest an exercise",

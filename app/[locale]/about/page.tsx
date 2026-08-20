@@ -96,26 +96,26 @@ export default async function AboutPage({
         ]}
       />
       <main className="mx-auto w-full max-w-6xl px-5 py-8 sm:px-8 lg:px-10">
-        <section className="mb-8 grid items-center gap-8 lg:grid-cols-[1fr_420px] ps-7 sm:ps-10">
-          <div className="pt-8 lg:pt-20">
-            <h1 className="mb-5 text-4xl font-medium tracking-normal text-foreground sm:text-5xl">
+        <section className="mb-8 grid items-center md:grid-cols-[1fr_420px] xl:ps-10">
+          <div className="pt-12 lg:pt-20">
+            <h1 className="mb-5 text-3xl font-medium tracking-normal text-foreground md:text-5xl">
               {tMenu("about")}
             </h1>
-            <p className="max-w-xl text-lg leading-7 text-foreground/70 mb-3">
+            <p className="max-w-xl text-base md:text-lg leading-6 md:leading-7 text-foreground/70 mb-3">
               {tAbout("hero.description")}
             </p>
-            <p className="max-w-xl text-lg leading-7 text-foreground/70">
+            <p className="max-w-xl text-base md:text-lg leading-6 md:leading-7 text-foreground/70">
               {tAbout("hero.description1")}
             </p>
           </div>
-          <div className="relative min-h-64 overflow-hidden rounded-4xl">
+          <div className="relative md:min-h-64 overflow-hidden rounded-4xl mt-4 md:mt-0">
             <div className="absolute bottom-3 right-4 h-44 w-80 rounded-full bg-foreground/5 blur-sm" />
             <Image
               src="/mascot/calm.svg"
               width={430}
               height={300}
               alt=""
-              className="relative ml-auto h-auto w-full max-w-3/4"
+              className="relative ml-auto h-auto w-full max-w-2xs md:max-w-3/4"
               loading="eager"
             />
           </div>
@@ -177,7 +177,7 @@ export default async function AboutPage({
             <h2 className="mb-8 text-2xl font-medium text-primary">
               {tAbout("features.title")}
             </h2>
-            <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
               {featureItems.map((feature) => (
                 <div key={feature.title} className="grid grid-cols-[64px_1fr] gap-4">
                   <div className={`flex h-14 w-14 items-center justify-center rounded-full ${feature.tone}`}>
@@ -243,7 +243,7 @@ export default async function AboutPage({
               <h2 className="mb-3 text-2xl font-medium text-primary">
                 {tAbout("support.title")}
               </h2>
-              <p className="text-base leading-7 text-foreground/70">
+              <p className="text-base leading-5 text-foreground/70">
                 {tAbout("support.text")}
               </p>
             </div>

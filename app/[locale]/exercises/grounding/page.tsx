@@ -37,7 +37,7 @@ export default function Grounding() {
           { name: t('grounding'), path: "/exercises/grounding" },
         ]}
       />
-      <div className="container mx-auto px-10 py-8">
+      <div className="container mx-auto px-5 sm:px-8 lg:px-10 py-8">
         <ExercisesHeader title={ t('grounding') }>
           <p className="text-base text-tx-primary whitespace-pre-line">
             { t('groundingReadMore') }

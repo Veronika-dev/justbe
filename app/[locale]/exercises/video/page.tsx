@@ -38,7 +38,7 @@ export default function Video() {
           { name: t('video'), path: "/exercises/video" },
         ]}
       />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-5 sm:px-8 lg:px-10 py-8">
         <ExercisesHeader title={ t('video') }>
           <>
             <p className="text-base text-tx-primary whitespace-pre-line">
@@ -50,9 +50,7 @@ export default function Video() {
           </>
         </ExercisesHeader>
         <ExercisesVideo />
-        <a href="https://edinburghrecords.com" target="_blank" className="block text-sm text-gray-500 mt-4">
-          { tCommon('source') }: Edinburgh Records
-        </a>
+        <p className="block text-sm text-gray-500 mt-4">{ tCommon('disclaimerExternal') }</p>
       </div>
     </>
   );

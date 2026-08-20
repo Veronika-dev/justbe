@@ -35,9 +35,9 @@ export default function CreativeCards() {
   const card = cardsList[index]
 
   return (
-    <div className="flex flex-col items-center gap-6 py-4 max-w-120 mx-auto">
+    <div className="flex flex-col items-center gap-6 py-4 w-full max-w-120 mx-auto">
       <Card card={card} />
-      <div className="flex justify-start w-full relative">
+      <div className="flex justify-start w-full relative min-h-11">
         <button
           onClick={selectRandom}
           className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors cursor-pointer absolute left-0"
@@ -65,7 +65,7 @@ export default function CreativeCards() {
           </button>
         </div>
       </div>
-      <p className="text-sm opacity-40">{ t('disclaimer') }</p>
+      <p className="block text-sm text-gray-500 mt-4 text-center">{ t('disclaimer') }</p>
     </div>
   )
 }
@@ -73,11 +73,11 @@ export default function CreativeCards() {
 function Card({ card }: { card: CreativeCard }) {
   const t = useTranslations('Common')
   return (
-    <div className="w-full rounded-2xl card-background p-8 min-h-48">
+    <div className="w-full rounded-2xl card-background p-5 sm:p-8 min-h-48">
       <div>
         { card.image && <Image src={`/exercises/creative/${card.image}.webp`} alt="" className="mb-4" width={580} height={400} /> }
-        <h2 className="text-2xl font-semibold mb-3">{card.title}</h2>
-        <p className="text-base opacity-70 leading-relaxed">{card.description}</p>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-3">{card.title}</h2>
+        <p className="text-sm sm:text-base opacity-70 leading-relaxed">{card.description}</p>
       </div>
       {card.link && (
         <div className="text-right">

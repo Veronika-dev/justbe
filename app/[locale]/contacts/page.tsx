@@ -32,14 +32,14 @@ export default async function ContactsPage({
   const tMenu = await getTranslations({ locale, namespace: "Menu" });
   const tContacts = await getTranslations({ locale, namespace: "Contacts" });
   const contactItems = [
-    {
-      title: tContacts("methods.email.title"),
-      value: tContacts("methods.email.value"),
-      description: tContacts("methods.email.description"),
-      href: `mailto:${tContacts("methods.email.value")}`,
-      icon: Mail,
-      tone: "border-primary/25 bg-primary/10 text-primary ring-primary/10",
-    },
+    // {
+    //   title: tContacts("methods.email.title"),
+    //   value: tContacts("methods.email.value"),
+    //   description: tContacts("methods.email.description"),
+    //   href: `mailto:${tContacts("methods.email.value")}`,
+    //   icon: Mail,
+    //   tone: "border-primary/25 bg-primary/10 text-primary ring-primary/10",
+    // },
     {
       title: tContacts("methods.telegram.title"),
       value: tContacts("methods.telegram.value"),
@@ -85,9 +85,9 @@ export default async function ContactsPage({
           <h2 className="mb-4 text-2xl font-medium text-primary md:text-3xl">
             {tContacts("connect.title")}
           </h2>
-          <p className="mb-7 text-base text-foreground/60 md:mb-9 md:text-lg">
-            {tContacts("connect.description")}
-          </p>
+          {/*<p className="mb-7 text-base text-foreground/60 md:mb-9 md:text-lg">*/}
+          {/*  {tContacts("connect.description")}*/}
+          {/*</p>*/}
           <div className="space-y-4">
             {contactItems.map((item) => (
               <a

@@ -3,7 +3,7 @@
 import { useCheckin } from "@/lib/hooks/useCheckin";
 import Question from "./question";
 import {useTranslations} from "next-intl";
-import {useMemo} from "react";
+import {useEffect, useMemo, useRef} from "react";
 import CheckinResult from "@/components/checkin/result";
 import {useCheckinStore} from "@/providers/checkin-store-provider";
 
@@ -49,11 +49,29 @@ export default function Checkin() {
 
   const { setCurrentResult } = useCheckinStore((state) => state)
   const { currentStep, handleAnswer, handleBack, canGoBack, isComplete, result, resetResult } = useCheckin(setCurrentResult);
+  const checkinRef = useRef<HTMLDivElement>(null);
+  const didMountRef = useRef(false);
+
+  useEffect(() => {
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }, [currentStep]);
 
   if (isComplete) {
     if (result) {
       return (
-        <CheckinResult result={result} resetResult={resetResult} />
+        <div ref={checkinRef}>
+          <CheckinResult result={result} resetResult={resetResult} />
+        </div>
       );
     }
   }
@@ -61,7 +79,7 @@ export default function Checkin() {
   const currentQuestion = questions[currentStep];
 
   return (
-    <>
+    <div ref={checkinRef}>
       <Question
         question={currentQuestion.question}
         description={currentQuestion.description}
@@ -70,6 +88,6 @@ export default function Checkin() {
         onAnswer={handleAnswer}
         onBack={handleBack}
       />
-    </>
+    </div>
   );
 }

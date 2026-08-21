@@ -1,8 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #0a0a0a;
+  --foreground: #c2c0ce;
+  --primary: oklch(0.47 0.11 281.17);
+  --primary-value: 0.47 0.11 281.17;
+  --primary-100: oklch(0.18 0.02 284.69);
+  --primary-200: oklch(0.22 0.03 283.9);
+  --bg-base:       #060b10;
+  --bg-surface:    #0c1520;
+  --bg-elevated:   #141e2c;
+  --bg-hover:      #1c2a3a;
+  --accent-teal:   #1e6b8a;
+  --accent-sage:   #1e5a3c;
+  --accent-terra:  #7a4020;
+  --accent-lav:    #5c3c7a;
+  --accent-amber:  #7a4e1c;
+  --text-primary:  #C3C1F8;
+  --text-secondary:#7a94a8;
+  --text-dim:      #4a6070;
+  --border:        rgba(212,224,232,0.06);
 }
 
 @theme inline {
@@ -18,30 +36,6 @@
   --color-tx-dim: var(--text-dim);
   --color-surface: var(--bg-surface);
   --color-elevated: var(--bg-elevated);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #c2c0ce;
-    --primary: oklch(0.47 0.11 281.17);
-    --primary-value: 0.47 0.11 281.17;
-    --primary-100: oklch(0.18 0.02 284.69);
-    --primary-200: oklch(0.22 0.03 283.9);
-    --bg-base:       #060b10;
-    --bg-surface:    #0c1520;
-    --bg-elevated:   #141e2c;
-    --bg-hover:      #1c2a3a;
-    --accent-teal:   #1e6b8a;
-    --accent-sage:   #1e5a3c;
-    --accent-terra:  #7a4020;
-    --accent-lav:    #5c3c7a;
-    --accent-amber:  #7a4e1c;  /* ночной */
-    --text-primary:  #C3C1F8;  /* 14.7:1 AAA */
-    --text-secondary:#7a94a8;  /* 6.2:1  AA  */
-    --text-dim:      #4a6070;  /* 3.0:1  large */
-    --border:        rgba(212,224,232,0.06);
-  }
 }
 
 body {

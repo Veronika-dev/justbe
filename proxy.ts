@@ -3,21 +3,6 @@ import {NextRequest, NextResponse} from 'next/server';
 const SUPPORTED_LOCALES = ['ru', 'en'] as const;
 const DEFAULT_LOCALE = 'ru';
 
-function getLocale(request: NextRequest) {
-  const cookieLocale = request.cookies.get('locale')?.value;
-
-  if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as 'ru' | 'en')) {
-    return cookieLocale;
-  }
-
-  const acceptLanguage = request.headers.get('accept-language') ?? '';
-  if (acceptLanguage.toLowerCase().startsWith('en')) {
-    return 'en';
-  }
-
-  return DEFAULT_LOCALE;
-}
-
 export function proxy(request: NextRequest) {
   const {pathname} = request.nextUrl;
 
@@ -40,12 +25,6 @@ export function proxy(request: NextRequest) {
     const response = NextResponse.redirect(new URL(pathWithoutLocale, request.url));
     response.cookies.set('locale', DEFAULT_LOCALE, { path: '/' });
     return response;
-  }
-
-  const locale = getLocale(request);
-
-  if (pathname === '/' && locale !== DEFAULT_LOCALE) {
-    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
   }
 
   const rewritePath =

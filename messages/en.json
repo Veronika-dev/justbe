@@ -36,6 +36,14 @@
     "readMore": "Read more",
     "disclaimerExternal": "We do not control the content, availability, or privacy policies of external websites and video resources, and we are not responsible for them."
   },
+  "CookieConsent": {
+    "ariaLabel": "Analytics consent",
+    "title": "Can we use a little analytics?",
+    "description": "We use Yandex Metrica only after consent to understand which pages help and what should be improved. This is the only annoying thing on this site, and we will not bother you again.",
+    "privacyLink": "Read more in the Privacy Policy.",
+    "accept": "Allow",
+    "decline": "Not now"
+  },
   "Checkin": {
     "description": "Choose what feels closest right now, and we’ll suggest an exercise",
     "q1": "How does your body feel?",
@@ -466,14 +474,15 @@
           "Displaying the site and its features.",
           "Saving the language preference.",
           "Maintaining security, fixing errors, and improving stability.",
-          "Analytics may be added later only after this policy is updated and, where required, a consent mechanism is provided."
+          "Yandex Metrica is enabled only after user consent and is used to analyze traffic, traffic sources, and improve the interface."
         ]
       },
       {
         "title": "Cookies and analytics",
         "body": [
           "The site currently uses a functional language cookie. This cookie supports expected interface behavior.",
-          "If analytics, advertising, or third-party cookies are added later, users will receive information about them and, where required by law, a way to give or withdraw consent.",
+          "The site uses Yandex Metrica only after user consent. Metrica may use cookies and process technical data about page visits, device, browser, referral source, and interactions with the site.",
+          "If advertising or other third-party cookies are added later, users will receive information about them and, where required by law, a way to give or withdraw consent.",
           "Embedded third-party services, such as YouTube videos, may set their own cookies and process data under their own terms when users interact with that content."
         ]
       },

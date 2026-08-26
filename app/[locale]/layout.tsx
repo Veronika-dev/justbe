@@ -13,7 +13,7 @@ import {
   getSupportedLocale,
   siteUrl,
 } from "@/lib/seo";
-import YandexMetrika from "@/components/analytics/yandex";
+import AnalyticsConsent from "@/components/analytics/analytics-consent";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -79,11 +79,11 @@ export default async function RootLayout({
       className={`${manrope.variable} h-full antialiased theme-dark`}
     >
       <body className="min-h-full flex align-items-center ps-0 lg:ps-70">
-        <YandexMetrika />
         <JsonLd data={websiteJsonLd} />
         <JsonLd data={organizationJsonLd} />
         <CheckinStoreProvider>
           <NextIntlClientProvider>
+            <AnalyticsConsent />
             <Sidebar />
             {children}
           </NextIntlClientProvider>
